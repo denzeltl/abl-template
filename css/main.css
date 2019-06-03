@@ -14,6 +14,24 @@ input:focus {
     background: var(--primary-color);
 }
 
+#caseflow-tabs li a {
+    background: #5a5a5a;
+    color: #fff;
+}
+
+#caseflow-tabs li a:hover {
+    background: #fff;
+    color: #1a202c;
+}
+
+#caseflow-tabs li .selected-tab {
+    background: #fff;
+    color: #1a202c;
+    border-width: 1px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
 .control {
     font-size: 1rem;
     position: relative;
