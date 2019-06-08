@@ -2,12 +2,36 @@
     --primary-color: #a70534;
 }
 
-input {
+input,
+select {
     border: 1.5px solid #edf2f7;
 }
 
-input:focus {
+input:focus,
+select:focus {
     border-color: var(--primary-color);
+}
+
+#borrower-button-container > div > button {
+    border: solid 1.5px #1a202c;
+}
+
+#borrower-button-container > div > button.disable-button {
+    border: solid 1.5px #b5b5b5;
+    color: #b5b5b5;
+    cursor: not-allowed;
+}
+
+#borrower-button-container > div > button:hover {
+    border: solid 1.5px var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+}
+
+#borrower-button-container > div > button.disable-button:hover {
+    border: solid 1.5px #b5b5b5;
+    background: #fff;
+    color: #b5b5b5;
 }
 
 #caseflow-section {
@@ -31,6 +55,8 @@ input:focus {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
 }
+
+/* Checklist & Radio */
 
 .control {
     font-size: 1rem;
