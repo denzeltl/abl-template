@@ -38,22 +38,22 @@ select:focus {
     background: var(--primary-color);
 }
 
-#caseflow-tabs li a {
+#caseflow-tabs li {
     background: #5a5a5a;
     color: #fff;
+    margin-bottom: 4px;
 }
 
-#caseflow-tabs li a:hover {
+#caseflow-tabs li:hover {
     background: #fff;
     color: #1a202c;
+    cursor: pointer;
 }
 
-#caseflow-tabs li .selected-tab {
+#caseflow-tabs li.selected-tab {
     background: #fff;
     color: #1a202c;
-    border-width: 1px;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+    margin-bottom: 0px;
 }
 
 /* Checklist & Radio */
