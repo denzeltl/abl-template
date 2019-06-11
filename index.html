@@ -29,9 +29,7 @@
         <!-- latag section -->
         <section id="latag-section" class="text-center bg-white">
             <div class="container mx-auto">
-                <div id="latag-header" class="text-2xl font-bold py-8">
-                    [matter number - surname, name]
-                </div>
+                <div id="latag-header" class="text-2xl font-bold py-8"></div>
                 <div id="latag-content" class="flex pb-8">
                     <div id="latag-content-left" class="w-1/2 mb-2 mx-4">
                         <div
@@ -410,114 +408,194 @@
             <div class="container py-16 mx-auto">
                 <div id="caseflow-container" class="bg-gray-900 p-4">
                     <ul id="caseflow-tabs" class="flex">
-                        <li id="tab-1" class="mr-1">
-                            <a
-                                class="bg-white inline-block py-2 px-4 font-semibold selected-tab"
-                                href="#"
-                                >ABL - General</a
-                            >
+                        <li
+                            id="tab-1"
+                            class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4 selected-tab"
+                        >
+                            ABL - General
                         </li>
-                        <li id="tab-2" class="mr-1">
-                            <a
-                                class="bg-white inline-block py-2 px-4 font-semibold"
-                                href="#"
-                                >Security</a
-                            >
+                        <li
+                            id="tab-2"
+                            class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
+                        >
+                            Security
                         </li>
-                        <li id="tab-3" class="mr-1">
-                            <a
-                                class="bg-white inline-block py-2 px-4 font-semibold"
-                                href="#"
-                                >Tax Invoice</a
-                            >
+                        <li
+                            id="tab-3"
+                            class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
+                        >
+                            Tax Invoice
                         </li>
-                        <li id="tab-4" class="mr-1">
-                            <a
-                                class="bg-white inline-block py-2 px-4 font-semibold"
-                                href="#"
-                                >Fees</a
-                            >
+                        <li
+                            id="tab-4"
+                            class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
+                        >
+                            Fees
                         </li>
-                        <li id="tab-5" class="mr-1">
-                            <a
-                                class="bg-white inline-block py-2 px-4 font-semibold"
-                                href="#"
-                                >Loan</a
-                            >
+                        <li
+                            id="tab-5"
+                            class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
+                        >
+                            Loan
                         </li>
-                        <li id="tab-6" class="mr-1">
-                            <a
-                                class="bg-white inline-block py-2 px-4 font-semibold"
-                                href="#"
-                                >Undertakings/SpC</a
-                            >
+                        <li
+                            id="tab-6"
+                            class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
+                        >
+                            Undertakings/SpC
                         </li>
-                        <li id="tab-7" class="mr-1">
-                            <a
-                                class="bg-white inline-block py-2 px-4 font-semibold"
-                                href="#"
-                                >Settlement</a
-                            >
+                        <li
+                            id="tab-7"
+                            class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
+                        >
+                            Settlement
                         </li>
-                        <li id="tab-8" class="mr-1">
-                            <a
-                                class="bg-white inline-block py-2 px-4 font-semibold"
-                                href="#"
-                                >Optional Docs</a
-                            >
+                        <li
+                            id="tab-8"
+                            class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
+                        >
+                            Optional Docs
                         </li>
                     </ul>
                     <ul id="caseflow-tabs-content">
-                        <li id="tab-1-content" class="bg-white flex p-4">
+                        <li
+                            id="tab-1-content"
+                            class="caseflow-tabs-content bg-white p-4"
+                        >
                             <div
-                                id="tab-1-content-left"
-                                class="w-1/2 border-r-2 border-gray-400 mt-4 mb-4 ml-4 pr-8"
+                                id="tab-1-content-container"
+                                class="flex flex-col"
                             >
-                                <label class="font-bold">
-                                    Mortgage Manager
-                                </label>
-                                <div class="relative">
-                                    <select
-                                        class="block appearance-none w-full bg-gray-200 text-gray-700 py-1 px-2 rounded focus:outline-none focus:bg-white select-state"
+                                <div
+                                    id="mortgage-manager-container"
+                                    class="flex"
+                                >
+                                    <label
+                                        class="w-1/3 text-right mr-4 font-bold"
+                                        for="select-mortgage-manager"
+                                        >Mortgage Manager</label
                                     >
-                                        <option value="default-state"
-                                            >-- Select State --</option
+                                    <div class="relative w-2/3">
+                                        <select
+                                            class="block appearance-none w-full bg-gray-200 py-1 px-2 rounded focus:outline-none focus:bg-white"
+                                            id="select-mortgage-manager"
                                         >
-                                        <option value="qld-state">QLD</option>
-                                        <option value="nsw-state">NSW</option>
-                                        <option value="vic-state">VIC</option>
-                                        <option value="sa-state">SA</option>
-                                        <option value="tas-state">TAS</option>
-                                        <option value="wa-state">WA</option>
-                                        <option value="act-state">ACT</option>
-                                        <option value="nt-state">NT</option>
-                                    </select>
-                                    <div
-                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-                                    >
-                                        <svg
-                                            class="fill-current h-4 w-4"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
+                                            <option>N/A</option>
+                                            <option>1 - Mr</option>
+                                            <option>2 - Mrs</option>
+                                            <option>3 - Ms</option>
+                                            <option>4 - Miss</option>
+                                            <option>5 - Dr</option>
+                                            <option>6 - Prof</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-1"
                                         >
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                                            />
-                                        </svg>
+                                            <svg
+                                                class="fill-current h-4 w-4"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                            >
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    id="author-paralegal-container"
+                                    class="flex flex-col"
+                                >
+                                    <div class="flex">
+                                        <label
+                                            class="w-1/3 text-right mr-4 font-bold"
+                                            for="paralegal-name"
+                                            >Paralegal</label
+                                        >
+                                        <input
+                                            class="w-2/3 bg-gray-200 py-1 px-2 leading-tight mr-4 outline-none focus:outline-none focus:bg-white"
+                                            type="text"
+                                            id="paralegal-name"
+                                            value=""
+                                            placeholder="XXX"
+                                        />
+                                    </div>
+                                    <div class="flex">
+                                        <label
+                                            class="w-1/3 text-right mr-4 font-bold"
+                                            for="team-leader"
+                                            >Team Leader</label
+                                        >
+                                        <input
+                                            class="w-2/3 bg-gray-400 py-1 px-2 leading-tight mr-4 outline-none border-gray-400 cursor-not-allowed"
+                                            type="text"
+                                            id="team-leader"
+                                            value=""
+                                            placeholder=""
+                                            disabled
+                                        />
+                                    </div>
+                                    <div class="flex">
+                                        <label
+                                            class="w-1/3 text-right mr-4 font-bold"
+                                            for="admin-assistant"
+                                            >Admin Assistant</label
+                                        >
+                                        <input
+                                            class="w-2/3 bg-gray-400 py-1 px-2 leading-tight mr-4 outline-none border-gray-400 cursor-not-allowed"
+                                            type="text"
+                                            id="admin-assistant"
+                                            value=""
+                                            placeholder=""
+                                            disabled
+                                        />
                                     </div>
                                 </div>
                             </div>
-                            <div id="tab-1-content-right" class="w-1/2 m-4">
-                                <p class="font-bold m-0">Notes:</p>
-                            </div>
                         </li>
-                        <li id="tab-2-content" class="bg-white"></li>
-                        <li id="tab-3-content" class="bg-white"></li>
-                        <li id="tab-4-content" class="bg-white"></li>
-                        <li id="tab-5-content" class="bg-white"></li>
-                        <li id="tab-6-content" class="bg-white"></li>
-                        <li id="tab-7-content" class="bg-white"></li>
-                        <li id="tab-8-content" class="bg-white"></li>
+                        <li
+                            id="tab-2-content"
+                            class="caseflow-tabs-content bg-white p-4 hidden"
+                        >
+                            Tab 2
+                        </li>
+                        <li
+                            id="tab-3-content"
+                            class="caseflow-tabs-content bg-white p-4 hidden"
+                        >
+                            Tab 3
+                        </li>
+                        <li
+                            id="tab-4-content"
+                            class="caseflow-tabs-content bg-white p-4 hidden"
+                        >
+                            Tab 4
+                        </li>
+                        <li
+                            id="tab-5-content"
+                            class="caseflow-tabs-content bg-white p-4 hidden"
+                        >
+                            Tab 5
+                        </li>
+                        <li
+                            id="tab-6-content"
+                            class="caseflow-tabs-content bg-white p-4 hidden"
+                        >
+                            Tab 6
+                        </li>
+                        <li
+                            id="tab-7-content"
+                            class="caseflow-tabs-content bg-white p-4 hidden"
+                        >
+                            Tab 7
+                        </li>
+                        <li
+                            id="tab-8-content"
+                            class="caseflow-tabs-content bg-white p-4 hidden"
+                        >
+                            Tab 8
+                        </li>
                     </ul>
                 </div>
             </div>
