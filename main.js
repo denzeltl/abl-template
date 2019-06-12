@@ -18,6 +18,7 @@ const caseflowTabs = document.querySelectorAll(".caseflow-tab");
 const caseflowTabsContents = document.querySelectorAll(
     ".caseflow-tabs-content"
 );
+const inputParalegal = document.querySelector("#paralegal-name");
 
 // matter number event listener
 matterNumber.addEventListener("change", e => {
@@ -118,209 +119,290 @@ function hideContentsOfTabs() {
     });
 }
 
-// paralegal's tl and aa
-function authorLeadAndAss(e) {
-    switch (e.target.value) {
-        case "ARD".toLowerCase():
-        case "ARD".toUpperCase():
-            teamLeader.value = "   ";
-            adminAssistant.value = "KED";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "CYS".toLowerCase():
-        case "CYS".toUpperCase():
-            teamLeader.value = "   ";
-            adminAssistant.value = "AYF";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "TMO".toLowerCase():
-        case "TMO".toUpperCase():
-            teamLeader.value = "   ";
-            adminAssistant.value = "IXC";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "MEF".toLowerCase():
-        case "MEF".toUpperCase():
-            teamLeader.value = "   ";
-            adminAssistant.value = "KXP";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "LMA".toLowerCase():
-        case "LMA".toUpperCase():
-            teamLeader.value = "   ";
-            adminAssistant.value = "RXW";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "HXP".toLowerCase():
-        case "HXP".toUpperCase():
-            teamLeader.value = "TMO";
-            adminAssistant.value = "IXC";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "KKM".toLowerCase():
-        case "KKM".toUpperCase():
-            teamLeader.value = "TMO";
-            adminAssistant.value = "IXC";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "NVP".toLowerCase():
-        case "NVP".toUpperCase():
-            teamLeader.value = "MEF";
-            adminAssistant.value = "KXP";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "SZT".toLowerCase():
-        case "SZT".toUpperCase():
-            teamLeader.value = "MEF";
-            adminAssistant.value = "KXP";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "DMP".toLowerCase():
-        case "DMP".toUpperCase():
-            teamLeader.value = "LMA";
-            adminAssistant.value = "RXW";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "SXB".toLowerCase():
-        case "SXB".toUpperCase():
-            teamLeader.value = "LMA";
-            adminAssistant.value = "RXW";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "LAM".toLowerCase():
-        case "LAM".toUpperCase():
-            teamLeader.value = "CYS";
-            adminAssistant.value = "AYF";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "NHM".toLowerCase():
-        case "NHM".toUpperCase():
-            teamLeader.value = "CYS";
-            adminAssistant.value = "AYF";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "NXA".toLowerCase():
-        case "NXA".toUpperCase():
-            teamLeader.value = "TMO";
-            adminAssistant.value = "JXW";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "RHH".toLowerCase():
-        case "RHH".toUpperCase():
-            teamLeader.value = "TMO";
-            adminAssistant.value = "JXW";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "VSA".toLowerCase():
-        case "VSA".toUpperCase():
-            teamLeader.value = "TMO";
-            adminAssistant.value = "JXW";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "RMF".toLowerCase():
-        case "RMF".toUpperCase():
-            teamLeader.value = "TMO";
-            adminAssistant.value = "OXO";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "RYE".toLowerCase():
-        case "RYE".toUpperCase():
-            teamLeader.value = "TMO";
-            adminAssistant.value = "OXO";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "BJT".toLowerCase():
-        case "BJT".toUpperCase():
-            teamLeader.value = "MEF";
-            adminAssistant.value = "NXL";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "CYM".toLowerCase():
-        case "CYM".toUpperCase():
-            teamLeader.value = "MEF";
-            adminAssistant.value = "NXL";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "KDB".toLowerCase():
-        case "KDB".toUpperCase():
-            teamLeader.value = "MEF";
-            adminAssistant.value = "NXL";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "SXF".toLowerCase():
-        case "SXF".toUpperCase():
-            teamLeader.value = "MEF";
-            adminAssistant.value = "NXL";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "BYC".toLowerCase():
-        case "BYC".toUpperCase():
-            teamLeader.value = "CYS";
-            adminAssistant.value = "AYF";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "CZL".toLowerCase():
-        case "CZL".toUpperCase():
-            teamLeader.value = "CYS";
-            adminAssistant.value = "AYF";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "JNT".toLowerCase():
-        case "JNT".toUpperCase():
-            teamLeader.value = "CYS";
-            adminAssistant.value = "AYF";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "RXA".toLowerCase():
-        case "RXA".toUpperCase():
-            teamLeader.value = "CYS";
-            adminAssistant.value = "AYF";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "SXH".toLowerCase():
-        case "SXH".toUpperCase():
-            teamLeader.value = "ARD";
-            adminAssistant.value = "RXW";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        case "JML".toLowerCase():
-        case "JML".toUpperCase():
-            teamLeader.value = "CYS";
-            adminAssistant.value = "AYF";
-            teamLeader.classList.remove("text-red-500");
-            adminAssistant.classList.remove("text-red-500");
-            break;
-        default:
-            teamLeader.value = "Incorrect Initials of Paralegal";
-            adminAssistant.value = "Incorrect Initials of Paralegal";
-            teamLeader.classList.add("text-red-500");
-            adminAssistant.classList.add("text-red-500");
+// input paralegal function
+
+inputParalegal.addEventListener("change", function(e) {
+    if (e.target.value.toUpperCase() == "ARD") {
+        document.querySelector("#team-leader").value = "   ";
+
+        document.querySelector("#admin-assistant").value = "KED";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "CYS") {
+        document.querySelector("#team-leader").value = "   ";
+
+        document.querySelector("#admin-assistant").value = "AYF";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "TMO") {
+        document.querySelector("#team-leader").value = "   ";
+
+        document.querySelector("#admin-assistant").value = "IXC";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "MEF") {
+        document.querySelector("#team-leader").value = "   ";
+
+        document.querySelector("#admin-assistant").value = "KXP";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "LMA") {
+        document.querySelector("#team-leader").value = "   ";
+
+        document.querySelector("#admin-assistant").value = "RXW";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "HXP") {
+        document.querySelector("#team-leader").value = "TMO";
+
+        document.querySelector("#admin-assistant").value = "IXC";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "KKM") {
+        document.querySelector("#team-leader").value = "TMO";
+
+        document.querySelector("#admin-assistant").value = "IXC";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "NVP") {
+        document.querySelector("#team-leader").value = "MEF";
+
+        document.querySelector("#admin-assistant").value = "KXP";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "DMP") {
+        document.querySelector("#team-leader").value = "LMA";
+
+        document.querySelector("#admin-assistant").value = "RXW";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "SXB") {
+        document.querySelector("#team-leader").value = "LMA";
+
+        document.querySelector("#admin-assistant").value = "RXW";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "LAM") {
+        document.querySelector("#team-leader").value = "CYS";
+
+        document.querySelector("#admin-assistant").value = "AYF";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "NHM") {
+        document.querySelector("#team-leader").value = "CYS";
+
+        document.querySelector("#admin-assistant").value = "AYF";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "NXA") {
+        document.querySelector("#team-leader").value = "TMO";
+
+        document.querySelector("#admin-assistant").value = "JXW";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "RHH") {
+        document.querySelector("#team-leader").value = "TMO";
+
+        document.querySelector("#admin-assistant").value = "JXW";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "VSA") {
+        document.querySelector("#team-leader").value = "TMO";
+
+        document.querySelector("#admin-assistant").value = "JXW";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "RMF") {
+        document.querySelector("#team-leader").value = "TMO";
+
+        document.querySelector("#admin-assistant").value = "OXO";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "RYE") {
+        document.querySelector("#team-leader").value = "TMO";
+
+        document.querySelector("#admin-assistant").value = "OXO";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "BJT") {
+        document.querySelector("#team-leader").value = "MEF";
+
+        document.querySelector("#admin-assistant").value = "NXL";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "CYM") {
+        document.querySelector("#team-leader").value = "MEF";
+
+        document.querySelector("#admin-assistant").value = "NXL";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "KDB") {
+        document.querySelector("#team-leader").value = "MEF";
+
+        document.querySelector("#admin-assistant").value = "NXL";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "SXF") {
+        document.querySelector("#team-leader").value = "MEF";
+
+        document.querySelector("#admin-assistant").value = "NXL";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "BYC") {
+        document.querySelector("#team-leader").value = "CYS";
+
+        document.querySelector("#admin-assistant").value = "AYF";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "CZL") {
+        document.querySelector("#team-leader").value = "CYS";
+
+        document.querySelector("#admin-assistant").value = "AYF";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "JNT") {
+        document.querySelector("#team-leader").value = "CYS";
+
+        document.querySelector("#admin-assistant").value = "AYF";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "RXA") {
+        document.querySelector("#team-leader").value = "CYS";
+
+        document.querySelector("#admin-assistant").value = "AYF";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "SXH") {
+        document.querySelector("#team-leader").value = "ARD";
+
+        document.querySelector("#admin-assistant").value = "RXW";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else if (e.target.value.toUpperCase() == "JML") {
+        document.querySelector("#team-leader").value = "CYS";
+
+        document.querySelector("#admin-assistant").value = "AYF";
+
+        document.querySelector("#team-leader").classList.remove("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.remove("text-red-500");
+    } else {
+        document.querySelector("#team-leader").value =
+            "Incorrect Initials of Paralegal";
+
+        document.querySelector("#admin-assistant").value =
+            "Incorrect Initials of Paralegal";
+
+        document.querySelector("#team-leader").classList.add("text-red-500");
+
+        document
+            .querySelector("#admin-assistant")
+            .classList.add("text-red-500");
     }
-}
+});
