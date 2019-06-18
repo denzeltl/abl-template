@@ -11,6 +11,11 @@ for (let i = 1; i < 7; i++) {
     let borrowerName = document.querySelector(`#borrower-${i}-name`);
     borrowerNamesArr.push(borrowerName);
 }
+const securityContainerArr = [];
+for (let i = 1; i < 7; i++) {
+    let security = document.querySelector(`#security-${i}-container`);
+    securityContainerArr.push(security);
+}
 let borrowerFullNamesArr = [];
 const addBorrowerBtn = document.querySelector("#add-borrower-button");
 const removeBorrowerBtn = document.querySelector("#remove-borrower-button");
@@ -19,6 +24,8 @@ const caseflowTabsContents = document.querySelectorAll(
     ".caseflow-tabs-content"
 );
 const inputParalegal = document.querySelector("#paralegal-name");
+const addSecurityBtn = document.querySelector("#add-security-button");
+const removeSecurityBtn = document.querySelector("#remove-security-button");
 
 // matter number event listener
 matterNumber.addEventListener("change", e => {
@@ -90,6 +97,48 @@ removeBorrowerBtn.addEventListener("click", () => {
         borrowerContainerArr[1].classList.add("hidden");
         borrowerContainerArr[1].classList.remove("not-hidden");
         removeBorrowerBtn.classList.add("disable-button");
+    }
+});
+
+// security buttons event listener
+addSecurityBtn.addEventListener("click", () => {
+    if (securityContainerArr[1].classList.contains("hidden")) {
+        securityContainerArr[1].classList.remove("hidden");
+        securityContainerArr[1].classList.add("not-hidden");
+        removeSecurityBtn.classList.remove("disable-button");
+    } else if (securityContainerArr[2].classList.contains("hidden")) {
+        securityContainerArr[2].classList.remove("hidden");
+        securityContainerArr[2].classList.add("not-hidden");
+    } else if (securityContainerArr[3].classList.contains("hidden")) {
+        securityContainerArr[3].classList.remove("hidden");
+        securityContainerArr[3].classList.add("not-hidden");
+    } else if (securityContainerArr[4].classList.contains("hidden")) {
+        securityContainerArr[4].classList.remove("hidden");
+        securityContainerArr[4].classList.add("not-hidden");
+    } else if (securityContainerArr[5].classList.contains("hidden")) {
+        securityContainerArr[5].classList.remove("hidden");
+        securityContainerArr[5].classList.add("not-hidden");
+        addSecurityBtn.classList.add("disable-button");
+    }
+});
+removeSecurityBtn.addEventListener("click", () => {
+    if (securityContainerArr[5].classList.contains("not-hidden")) {
+        securityContainerArr[5].classList.add("hidden");
+        securityContainerArr[5].classList.remove("not-hidden");
+        addSecurityBtn.classList.remove("disable-button");
+    } else if (securityContainerArr[4].classList.contains("not-hidden")) {
+        securityContainerArr[4].classList.add("hidden");
+        securityContainerArr[4].classList.remove("not-hidden");
+    } else if (securityContainerArr[3].classList.contains("not-hidden")) {
+        securityContainerArr[3].classList.add("hidden");
+        securityContainerArr[3].classList.remove("not-hidden");
+    } else if (securityContainerArr[2].classList.contains("not-hidden")) {
+        securityContainerArr[2].classList.add("hidden");
+        securityContainerArr[2].classList.remove("not-hidden");
+    } else if (securityContainerArr[1].classList.contains("not-hidden")) {
+        securityContainerArr[1].classList.add("hidden");
+        securityContainerArr[1].classList.remove("not-hidden");
+        removeSecurityBtn.classList.add("disable-button");
     }
 });
 
