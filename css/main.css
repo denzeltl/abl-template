@@ -93,7 +93,7 @@ select:focus {
 /* Hover and focus states */
 .control:hover input ~ .control__indicator,
 .control input:focus ~ .control__indicator {
-    background: #fff;
+    background: #c6c6c6;
 }
 
 /* Checked state */
