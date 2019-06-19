@@ -1,6 +1,7 @@
 let latagHeader = document.querySelector("#latag-header");
 latagHeader.textContent = " - ";
 const matterNumber = document.querySelector("#matter-number");
+// borrower variables
 const borrowerContainerArr = [];
 for (let i = 1; i < 7; i++) {
     let borrower = document.querySelector(`#borrower-${i}-container`);
@@ -11,21 +12,31 @@ for (let i = 1; i < 7; i++) {
     let borrowerName = document.querySelector(`#borrower-${i}-name`);
     borrowerNamesArr.push(borrowerName);
 }
+let borrowerFullNamesArr = [];
+const addBorrowerBtn = document.querySelector("#add-borrower-button");
+const removeBorrowerBtn = document.querySelector("#remove-borrower-button");
+
+// security variables
 const securityContainerArr = [];
 for (let i = 1; i < 7; i++) {
     let security = document.querySelector(`#security-${i}-container`);
     securityContainerArr.push(security);
 }
-let borrowerFullNamesArr = [];
-const addBorrowerBtn = document.querySelector("#add-borrower-button");
-const removeBorrowerBtn = document.querySelector("#remove-borrower-button");
+let securityAddressArr = [];
+for (let i = 1; i < 7; i++) {
+    let securityAddress = document.querySelector(`#security-${i}-address`);
+    securityAddressArr.push(securityAddress);
+}
+let securityFullAddressArr = [];
+const addSecurityBtn = document.querySelector("#add-security-button");
+const removeSecurityBtn = document.querySelector("#remove-security-button");
+
+// caseflow variables
+const inputParalegal = document.querySelector("#paralegal-name");
 const caseflowTabs = document.querySelectorAll(".caseflow-tab");
 const caseflowTabsContents = document.querySelectorAll(
     ".caseflow-tabs-content"
 );
-const inputParalegal = document.querySelector("#paralegal-name");
-const addSecurityBtn = document.querySelector("#add-security-button");
-const removeSecurityBtn = document.querySelector("#remove-security-button");
 
 // matter number event listener
 matterNumber.addEventListener("change", e => {
@@ -49,6 +60,20 @@ for (let i = 0; i < 6; i++) {
         }
     });
     borrowerFullNamesArr.push(obj);
+}
+
+// securities address event listener
+for (let i = 0; i < 6; i++) {
+    let obj = {};
+    securityAddressArr[i].addEventListener("change", function(e) {
+        let securityAdress = e.target.value
+            .toLowerCase()
+            .split(" ")
+            .map(s => s.charAt(0).toUpperCase() + s.substring(1));
+        obj["postalCode"] = securityAdress.pop();
+        // obj["middleName"] = borrowerFullName.join(" ");
+    });
+    securityFullAddressArr.push(obj);
 }
 
 function pasteBorrowerOneName() {
