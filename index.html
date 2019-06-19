@@ -18,19 +18,12 @@
             href="css/tailwind.css"
         />
         <link
-
             rel="stylesheet"
-
             type="text/css"
-
             media="screen"
-
             href="css/main.css"
-
         />
-
         <!-- <link rel="stylesheet" href="css/debug.css" /> -->
-
     </head>
 
     <body class="text-gray-900 bg-gray-900">
@@ -42,8 +35,6 @@
             <div class="container mx-auto">
 
                 <div id="latag-header" class="text-2xl font-bold py-8"></div>
-
- 
 
                 <div id="latag-content" class="flex pb-8">
 
@@ -67,8 +58,6 @@
 
                             >
 
- 
-
                             <input
 
                                 class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
@@ -85,7 +74,6 @@
 
                         </div>
 
- 
 
                         <div
 
@@ -105,8 +93,6 @@
 
                             >
 
- 
-
                             <input
 
                                 class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
@@ -118,17 +104,10 @@
                                 value="To "
 
                                 placeholder="Refinance / Purchase"
-
-                            />
-
+           />
                        </div>
-
  
-
                         <!-- amounts container -->
-
- 
-
                         <div class="flex flex-col">
 
                             <div
@@ -149,59 +128,13 @@
 
                                 >
 
- 
-
                                 <input
 
-                                    class="w-2/3 bg-gray-400 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white cursor-not-allowed"
+                                    class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
 
                                     type="text"
 
                                     id="loan-amount"
-
-                                    value=""
-
-                                    placeholder="$0.00"
-
-                                    disabled
-
-                                />
-
-                            </div>
-
- 
-
-                            TODO:Splits for loan amount and button for add
-
- 
-
-                            <div
-
-                                id="split-amounts-container"
-
-                                class="flex items-center mb-4"
-
-                            >
-
-                                <label
-
-                                    class="w-1/3 text-right mr-4 text-sm font-semibold"
-
-                                    for="split-amount-1"
-
-                                    >Split Amount 1</label
-
-                                >
-
- 
-
-                                <input
-
-                                    class="w-2/3 bg-gray-200 py-1 px-2 leading-tight ml-1 outline-none focus:outline-none focus:bg-white text-sm"
-
-                                    type="text"
-
-                                    id="split-amount-1"
 
                                     value=""
 
@@ -219,9 +152,9 @@
 
                     <div id="latag-content-right" class="w-1/2 mb-2 mx-4">
 
-                        <!-- borrowers container -->
-
  
+
+                        <!-- borrowers container -->
 
                         <div
 
@@ -237,7 +170,7 @@
 
                                 class="mb-1 flex items-center w-full"
 
-                            >
+                           >
 
                                 <label
 
@@ -249,15 +182,21 @@
 
                                 >
 
- 
-
                                 <div class="w-2/3 flex">
+
+ 
 
                                     <div class="relative mr-1">
 
+ 
+
                                         <select
 
+ 
+
                                             class="appearance-none bg-gray-200 py-1 pl-2 pr-5 rounded focus:outline-none focus:bg-white"
+
+ 
 
                                             id="borrower-1-salutation"
 
@@ -294,6 +233,7 @@
  
 
                                         <div
+
                                             class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
 
                                         >
@@ -324,19 +264,35 @@
 
                                     <input
 
+ 
+
                                         class="bg-gray-200 py-1 px-2 w-full leading-tight outline-none focus:outline-none focus:bg-white"
+
+ 
 
                                         type="text"
 
+ 
+
                                         id="borrower-1-name"
+
+ 
 
                                         value=""
 
+ 
+
                                         placeholder="Name"
+
+ 
 
                                     />
 
+ 
+
                                 </div>
+
+ 
 
                             </div>
 
@@ -352,6 +308,8 @@
 
                                 <label
 
+ 
+
                                     class="w-1/3 text-right mr-4 font-bold"
 
                                     for="borrower-2-name"
@@ -364,11 +322,19 @@
 
                 <div class="w-2/3 flex">
 
+ 
+
                                 <div class="relative mr-1">
+
+ 
 
                                     <select
 
+ 
+
                                         class="appearance-none bg-gray-200 py-1 pl-2 pr-5 rounded focus:outline-none focus:bg-white"
+
+ 
 
                                         id="borrower-2-salutation"
 
@@ -406,31 +372,53 @@
 
                                     <div
 
+ 
+
                                         class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
 
                                     >
 
+ 
+
                                         <svg
+
+ 
 
                                             class="fill-current h-4 w-4"
 
+ 
+
                                             xmlns="http://www.w3.org/2000/svg"
 
+ 
+
                                             viewBox="0 0 20 20"
+
+ 
 
                                         >
 
                                             <path
 
+ 
+
                                                 d="M9.293
 
 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
 
+ 
+
                                             />
+
+ 
 
                                         </svg>
 
+ 
+
                                     </div>
+
+ 
 
                                 </div>
 
@@ -478,13 +466,21 @@
 
 <div class="w-2/3 flex">
 
+ 
+
                                 <div class="relative mr-1">
 
                                     <select
 
+ 
+
                                         class="appearance-none bg-gray-200 py-1 pl-2 pr-5 rounded focus:outline-none focus:bg-white"
 
+ 
+
                                         id="borrower-3-salutation"
+
+ 
 
                                     >
 
@@ -515,8 +511,6 @@
                                         <option>6 - Prof</option>
 
                                     </select>
-
- 
 
                                     <div
 
@@ -550,17 +544,30 @@
 
                                 <input
 
+ 
+
                                     class="bg-gray-200 py-1 px-2 w-full leading-tight outline-none focus:outline-none focus:bg-white"
+
+ 
 
                                     type="text"
 
+ 
+
                                     id="borrower-3-name"
+
+ 
 
                                     value=""
 
+ 
+
                                     placeholder="Name"
+
                                 />
+
                             </div>
+
 </div>
 
                             <div
@@ -575,7 +582,11 @@
 
                                     class="w-1/3 text-right mr-4 font-bold"
 
+ 
+
                                     for="borrower-4-name"
+
+ 
 
                                     >Borrower 4</label
 
@@ -585,15 +596,27 @@
 
 <div class="w-2/3 flex">
 
+ 
+
                                 <div class="relative mr-1">
+
+ 
 
                                     <select
 
+ 
+
                                         class="appearance-none bg-gray-200 py-1 pl-2 pr-5 rounded focus:outline-none focus:bg-white"
+
+ 
 
                                         id="borrower-4-salutation"
 
+ 
+
                                     >
+
+ 
 
                                         <option>- N/A -</option>
 
@@ -623,7 +646,6 @@
 
                                     </select>
 
-
                                     <div
 
                                         class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
@@ -638,17 +660,29 @@
 
                                             viewBox="0 0 20 20"
 
+ 
+
                                         >
 
                                             <path
 
+ 
+
                                                 d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+
+ 
 
                                             />
 
+ 
+
                                         </svg>
 
+ 
+
                                     </div>
+
+ 
 
                                 </div>
 
@@ -656,37 +690,67 @@
 
                                 <input
 
+ 
+
                                     class="bg-gray-200 py-1 px-2 w-full leading-tight outline-none focus:outline-none focus:bg-white"
 
+ 
+
                                     type="text"
+
+ 
 
                                     id="borrower-4-name"
 
+ 
+
                                     value=""
+
+ 
 
                                     placeholder="Name"
 
+ 
+
                                 />
+
+ 
 
                             </div>
 
+ 
+
 </div>
 
+ 
+
                             <div
+
+ 
 
                                 id="borrower-5-container"
 
+ 
+
                                 class="mb-1 flex items-center w-full hidden"
 
                             >
 
                                 <label
 
+ 
+
                                     class="w-1/3 text-right mr-4 font-bold"
+
+ 
 
                                     for="borrower-5-name"
 
+ 
+
                                     >Borrower 5</label
+
+ 
 
                                 >
 
@@ -694,13 +758,23 @@
 
 <div class="w-2/3 flex">
 
+ 
+
                                 <div class="relative mr-1">
+
+ 
 
                                     <select
 
+ 
+
                                         class="appearance-none bg-gray-200 py-1 pl-2 pr-5 rounded focus:outline-none focus:bg-white"
 
+ 
+
                                         id="borrower-5-salutation"
+
+ 
 
                                     >
 
@@ -742,23 +816,43 @@
 
                                         <svg
 
+ 
+
                                             class="fill-current h-4 w-4"
+
+ 
 
                                             xmlns="http://www.w3.org/2000/svg"
 
+ 
+
                                             viewBox="0 0 20 20"
+
+ 
 
                                         >
 
+ 
+
                                             <path
+
+ 
 
                                                 d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
 
+ 
+
                                             />
+
+ 
 
                                         </svg>
 
+ 
+
                                     </div>
+
+ 
 
                                 </div>
 
@@ -766,37 +860,69 @@
 
                                 <input
 
+ 
+
                                     class="bg-gray-200 py-1 px-2 w-full leading-tight outline-none focus:outline-none focus:bg-white"
+
+ 
 
                                     type="text"
 
+ 
+
                                     id="borrower-5-name"
+
+ 
 
                                     value=""
 
+ 
+
                                     placeholder="Name"
 
+ 
+
                                 />
+
+ 
 
                             </div>
 
 </div>
 
+ 
+
                             <div
+
+ 
 
                                 id="borrower-6-container"
 
+ 
+
                                 class="mb-1 flex items-center w-full hidden"
+
+ 
 
                             >
 
+ 
+
                                 <label
+
+ 
 
                                     class="w-1/3 text-right mr-4 font-bold"
 
+ 
+
                                     for="borrower-6-name"
 
+ 
+
                                     >Borrower 6</label
+
+ 
 
                                 >
 
@@ -804,13 +930,23 @@
 
 <div class="w-2/3 flex">
 
+ 
+
                                 <div class="relative mr-1">
+
+ 
 
                                     <select
 
+ 
+
                                         class="appearance-none bg-gray-200 py-1 pl-2 pr-5 rounded focus:outline-none focus:bg-white"
 
+ 
+
                                         id="borrower-6-salutation"
+
+ 
 
                                     >
 
@@ -828,17 +964,15 @@
 
                                         <option>3 - Ms</option>
 
- 
-
                                         <option>4 - Miss</option>
-
- 
 
                                         <option>5 - Dr</option>
 
  
 
                                         <option>6 - Prof</option>
+
+ 
 
                                     </select>
 
@@ -854,53 +988,87 @@
 
                                             class="fill-current h-4 w-4"
 
+ 
+
                                             xmlns="http://www.w3.org/2000/svg"
+
+ 
 
                                             viewBox="0 0 20 20"
 
                                         >
 
+ 
+
                                             <path
-
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-
-                                            />
-
-                                        </svg>
-
-                                    </div>
-
-                                </div>
 
  
 
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+
+ 
+
+                                            />
+
+ 
+
+                                        </svg>
+
+ 
+
+                                    </div>
+
+ 
+
+                                </div>
+
                                 <input
+
+ 
 
                                     class="bg-gray-200 py-1 px-2 w-full leading-tight outline-none focus:outline-none focus:bg-white"
 
+ 
+
                                     type="text"
+
+ 
 
                                     id="borrower-6-name"
 
+ 
+
                                     value=""
+
+ 
 
                                     placeholder="Name"
 
+ 
+
                                 />
 
+ 
+
                             </div>
+
+ 
 
 </div>
 
                             <!-- borrower button -->
 
- 
-
                             <div
+
+ 
 
                                 id="borrower-button-container"
 
+ 
+
                                 class="flex items-center w-full"
+
+ 
 
                             >
 
@@ -910,15 +1078,25 @@
 
                                 <div class="w-2/3 flex">
 
+ 
+
                                     <button
 
+ 
+
                                         id="add-borrower-button"
+
+ 
 
                                         class="rounded font-semibold py-1 w-1/2 mr-1 outline-none focus:outline-none"
 
                                     >
 
+ 
+
                                         Add Borrower
+
+ 
 
                                     </button>
 
@@ -926,7 +1104,11 @@
 
                                     <button
 
+ 
+
                                         id="remove-borrower-button"
+
+ 
 
                                         class="rounded font-semibold py-1 w-1/2 outline-none focus:outline-none disable-button"
 
@@ -950,27 +1132,49 @@
 
                             id="securities-container"
 
+ 
+
                             class="flex items-center mb-4 flex-col"
 
                         >
 
+ 
+
                             <div
+
+ 
 
                                 id="security-1-container"
 
+ 
+
                                 class="mb-1 flex flex-col items-center w-full"
+
+ 
 
                            >
 
+ 
+
                                 <div class="flex items-center w-full">
+
+ 
 
                                 <label
 
+ 
+
                                     class="w-1/3 text-right mr-4 font-bold"
+
+ 
 
                                     for="security-1-address"
 
+ 
+
                                     >Security 1</label
+
+ 
 
                                 >
 
@@ -978,153 +1182,269 @@
 
                                 <input
 
+ 
+
                                     class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
+
+ 
 
                                     type="text"
 
+ 
+
                                     id="security-1-address"
+
+ 
 
                                     value=""
 
+ 
+
                                     placeholder="Address"
 
+ 
+
                                 />
+
+ 
 
 </div>
 
 <div class="flex items-center w-full">
 
-  
+ 
 
    <div class="w-1/3 mr-4"></div>
 
+ 
+
    <div class="w-2/3 flex text-left justify-center">
+
+ 
 
                 <div class="mt-1 w-full px-4">
 
+ 
+
                     <label class="control control--radio"
+
+ 
 
                         >Refinance
 
+ 
+
                         <input type="radio" name="security-1-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
+ 
+
                     <label class="control control--radio"
+
+ 
 
                         >Purchase
 
+ 
+
                         <input type="radio" name="security-1-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
             <label class="control control--radio"
 
+ 
+
                         >Further Advance
+
+ 
 
                         <input type="radio" name="security-1-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
       <label class="control control--radio"
 
+ 
+
                         >Clear Title
 
                         <input type="radio" name="security-1-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
 </div>
 
-                <div class="mt-1 w-full px-4">                                   
+                <div class="mt-1 w-full px-4">                                  
+
+ 
 
                                 <label
+
+ 
 
                                 id="security-1-checkbox-vacant-land"
 
+ 
+
                                     class="control control--checkbox"
+
+ 
 
                                     >Vacant Land
 
+ 
+
                                     <input type="checkbox" />
 
                                     <div class="control__indicator"></div>
 
                                 </label>
+
+ 
 
                                 <label
 
+ 
+
                                 id="security-1-checkbox-construction"
 
+ 
+
                                     class="control control--checkbox"
+
+ 
 
                                     >Construction
 
+ 
+
                                     <input type="checkbox" />
+
+ 
 
                                     <div class="control__indicator"></div>
 
+ 
+
                                 </label>
+
+ 
 
       <label
 
+ 
+
                                 id="security-1-checkbox-unregistered"
+
+ 
 
                                     class="control control--checkbox"
 
+ 
+
                                     >Unregistered / Proposed
+
+ 
 
                                     <input type="checkbox" />
 
+ 
+
                                     <div class="control__indicator"></div>
+
+ 
 
                                 </label>
 
-     </div>
+ 
 
      </div>
+
+ 
+
+     </div>
+
+ 
 
     </div>
 
+ 
+
                               </div>
+
+ 
 
 <div
 
                                 id="security-2-container"
 
+ 
+
                                 class="mb-1 flex flex-col items-center w-full hidden"
-
-                           >
-
-                                <div class="flex items-center w-full">
-
-                                <label
-
-                                    class="w-1/3 text-right mr-4 font-bold"
-
-                                    for="security-2-address"
-
-                                    >Security 2</label
-
-                                >
 
  
 
+                           >
+
+ 
+
+                                <div class="flex items-center w-full">
+
+ 
+
+                                <label
+
+ 
+
+                                    class="w-1/3 text-right mr-4 font-bold"
+
+ 
+
+                                    for="security-2-address"
+
+ 
+
+                                    >Security 2</label
+
+ 
+
+                                >
+
                                 <input
+
+ 
 
                                     class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
 
                                     type="text"
 
-                                    id="security-2-address"
+                                   id="security-2-address"
 
                                     value=""
 
@@ -1136,9 +1456,11 @@
 
 <div class="flex items-center w-full">
 
-  
+ 
 
    <div class="w-1/3 mr-4"></div>
+
+ 
 
    <div class="w-2/3 flex text-left justify-center">
 
@@ -1156,11 +1478,19 @@
 
                     <label class="control control--radio"
 
+ 
+
                         >Purchase
+
+ 
 
                         <input type="radio" name="security-2-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
@@ -1169,6 +1499,8 @@
                         >Further Advance
 
                         <input type="radio" name="security-2-radio-purpose" />
+
+ 
 
                         <div class="control__indicator"></div>
 
@@ -1182,7 +1514,11 @@
 
                         <div class="control__indicator"></div>
 
+ 
+
                     </label>
+
+ 
 
 </div>
 
@@ -1194,25 +1530,47 @@
 
                                     class="control control--checkbox"
 
+ 
+
                                     >Vacant Land
+
+ 
 
                                     <input type="checkbox" />
 
+ 
+
                                     <div class="control__indicator"></div>
+
+ 
 
                                 </label>
 
+ 
+
                                 <label
+
+ 
 
                                 id="security-2-checkbox-construction"
 
+ 
+
                                     class="control control--checkbox"
+
+ 
 
                                     >Construction
 
+ 
+
                                     <input type="checkbox" />
 
+ 
+
                                     <div class="control__indicator"></div>
+
+ 
 
                                 </label>
 
@@ -1220,13 +1578,23 @@
 
                                 id="security-2-checkbox-unregistered"
 
+ 
+
                                     class="control control--checkbox"
+
+ 
 
                                     >Unregistered / Proposed
 
+ 
+
                                     <input type="checkbox" />
 
+ 
+
                                     <div class="control__indicator"></div>
+
+ 
 
                                 </label>
 
@@ -1248,11 +1616,19 @@
 
                                 <div class="flex items-center w-full">
 
+ 
+
                                 <label
+
+ 
 
                                     class="w-1/3 text-right mr-4 font-bold"
 
+ 
+
                                     for="security-3-address"
+
+ 
 
                                     >Security 3</label
 
@@ -1262,15 +1638,27 @@
 
                                 <input
 
+ 
+
                                     class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
+
+ 
 
                                     type="text"
 
+ 
+
                                     id="security-3-address"
+
+ 
 
                                     value=""
 
+ 
+
                                     placeholder="Address"
+
+ 
 
                                 />
 
@@ -1278,39 +1666,71 @@
 
 <div class="flex items-center w-full">
 
-  
+ 
 
    <div class="w-1/3 mr-4"></div>
 
+ 
+
    <div class="w-2/3 flex text-left justify-center">
+
+ 
 
                 <div class="mt-1 w-full px-4">
 
+ 
+
                     <label class="control control--radio"
+
+ 
 
                         >Refinance
 
+ 
+
                         <input type="radio" name="security-3-radio-purpose" />
+
+ 
 
                         <div class="control__indicator"></div>
 
+ 
+
                     </label>
+
+ 
 
                     <label class="control control--radio"
 
+ 
+
                         >Purchase
 
+ 
+
                         <input type="radio" name="security-3-radio-purpose" />
+
+ 
 
                         <div class="control__indicator"></div>
 
+ 
+
                     </label>
+
+ 
 
             <label class="control control--radio"
 
+ 
+
                         >Further Advance
 
+ 
+
                         <input type="radio" name="security-3-radio-purpose" />
+
+ 
 
                         <div class="control__indicator"></div>
 
@@ -1318,17 +1738,27 @@
 
       <label class="control control--radio"
 
+ 
+
                         >Clear Title
 
                         <input type="radio" name="security-3-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
 </div>
 
-                <div class="mt-1 w-full px-4">                                   
+ 
+
+                <div class="mt-1 w-full px-4">                                  
+
+ 
 
                                 <label
 
@@ -1338,7 +1768,11 @@
 
                                     >Vacant Land
 
+ 
+
                                     <input type="checkbox" />
+
+ 
 
                                     <div class="control__indicator"></div>
 
@@ -1348,13 +1782,23 @@
 
                                 id="security-3-checkbox-construction"
 
+ 
+
                                     class="control control--checkbox"
+
+ 
 
                                     >Construction
 
+ 
+
                                     <input type="checkbox" />
 
+ 
+
                                     <div class="control__indicator"></div>
+
+ 
 
                                 </label>
 
@@ -1362,7 +1806,11 @@
 
                                 id="security-3-checkbox-unregistered"
 
+ 
+
                                     class="control control--checkbox"
+
+ 
 
                                     >Unregistered / Proposed
 
@@ -1370,9 +1818,13 @@
 
                                     <div class="control__indicator"></div>
 
+ 
+
                                 </label>
 
      </div>
+
+ 
 
 </div>
 
@@ -1386,11 +1838,17 @@
 
                                 id="security-4-container"
 
+ 
+
                                 class="mb-1 flex flex-col items-center w-full hidden"
+
+ 
 
                            >
 
                                 <div class="flex items-center w-full">
+
+ 
 
                                 <label
 
@@ -1402,17 +1860,23 @@
 
                                 >
 
- 
-
                                 <input
+
+ 
 
                                     class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
 
+ 
+
                                     type="text"
+
+ 
 
                                     id="security-4-address"
 
                                     value=""
+
+ 
 
                                     placeholder="Address"
 
@@ -1420,35 +1884,59 @@
 
 </div>
 
-<div class="flex items-center w-full">
+ 
 
-  
+<div class="flex items-center w-full">
 
    <div class="w-1/3 mr-4"></div>
 
+ 
+
    <div class="w-2/3 flex text-left justify-center">
+
+ 
 
                 <div class="mt-1 w-full px-4">
 
+ 
+
                     <label class="control control--radio"
+
+ 
 
                         >Refinance
 
+ 
+
                         <input type="radio" name="security-4-radio-purpose" />
+
+ 
 
                         <div class="control__indicator"></div>
 
+ 
+
                     </label>
+
+ 
 
                     <label class="control control--radio"
 
+ 
+
                         >Purchase
 
+ 
+
                         <input type="radio" name="security-4-radio-purpose" />
+
+ 
 
                         <div class="control__indicator"></div>
 
                     </label>
+
+ 
 
             <label class="control control--radio"
 
@@ -1456,29 +1944,49 @@
 
                         <input type="radio" name="security-4-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
 
                     </label>
 
+ 
+
       <label class="control control--radio"
+
+ 
 
                         >Clear Title
 
+ 
+
                         <input type="radio" name="security-4-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
 </div>
 
-                <div class="mt-1 w-full px-4">                                   
+ 
+
+                <div class="mt-1 w-full px-4">                                  
+
+ 
 
                                 <label
 
                                 id="security-4-checkbox-vacant-land"
 
+ 
+
                                     class="control control--checkbox"
+
+ 
 
                                     >Vacant Land
 
@@ -1486,53 +1994,85 @@
 
                                     <div class="control__indicator"></div>
 
+ 
+
                                 </label>
 
                                 <label
 
+ 
+
                                 id="security-4-checkbox-construction"
+
+ 
 
                                     class="control control--checkbox"
 
+ 
+
                                     >Construction
+
+ 
 
                                     <input type="checkbox" />
 
+ 
+
                                     <div class="control__indicator"></div>
 
+ 
+
                                 </label>
+
+ 
 
       <label
 
                                 id="security-4-checkbox-unregistered"
 
+ 
+
                                     class="control control--checkbox"
 
+ 
+
                                     >Unregistered / Proposed
+
+ 
 
                                     <input type="checkbox" />
 
                                     <div class="control__indicator"></div>
 
+ 
+
                                 </label>
 
      </div>
 
+ 
+
 </div>
+
+ 
 
 </div>
 
                             </div>
 
- 
-
 <div
 
+ 
+
                                 id="security-5-container"
+
+ 
 
                                 class="mb-1 flex flex-col items-center w-full hidden"
 
                            >
+
+ 
 
                                 <div class="flex items-center w-full">
 
@@ -1540,103 +2080,165 @@
 
                                     class="w-1/3 text-right mr-4 font-bold"
 
+ 
+
                                     for="security-5-address"
+
+ 
 
                                    >Security 5</label
 
                                 >
 
- 
-
                                 <input
 
+ 
+
                                     class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
+
+ 
 
                                     type="text"
 
                                     id="security-5-address"
 
+ 
+
                                     value=""
 
                                     placeholder="Address"
 
+ 
+
                                 />
+
+ 
 
 </div>
 
 <div class="flex items-center w-full">
 
-  
-
    <div class="w-1/3 mr-4"></div>
+
+ 
 
    <div class="w-2/3 flex text-left justify-center">
 
+ 
+
                 <div class="mt-1 w-full px-4">
 
+ 
+
                     <label class="control control--radio"
+
+ 
 
                         >Refinance
 
                         <input type="radio" name="security-5-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
                     <label class="control control--radio"
 
+ 
+
                         >Purchase
+
+ 
 
                         <input type="radio" name="security-5-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
             <label class="control control--radio"
 
+ 
+
                         >Further Advance
 
+ 
+
                         <input type="radio" name="security-5-radio-purpose" />
+
+ 
 
                         <div class="control__indicator"></div>
 
                     </label>
+
+ 
 
       <label class="control control--radio"
 
                         >Clear Title
 
+ 
+
                         <input type="radio" name="security-5-radio-purpose" />
+
+ 
 
                         <div class="control__indicator"></div>
 
                     </label>
 
+ 
+
 </div>
 
-                <div class="mt-1 w-full px-4">                                    
+                <div class="mt-1 w-full px-4">                                   
+
+ 
 
                                 <label
 
+ 
+
                                 id="security-5-checkbox-vacant-land"
+
+ 
 
                                     class="control control--checkbox"
 
                                     >Vacant Land
 
+ 
+
                                     <input type="checkbox" />
 
+ 
+
                                     <div class="control__indicator"></div>
+
+ 
 
                                 </label>
 
                                 <label
 
+ 
+
                                 id="security-5-checkbox-construction"
 
+ 
+
                                     class="control control--checkbox"
+
+ 
 
                                     >Construction
 
@@ -1644,9 +2246,13 @@
 
                                     <div class="control__indicator"></div>
 
+ 
+
                                 </label>
 
       <label
+
+ 
 
                                 id="security-5-checkbox-unregistered"
 
@@ -1656,6 +2262,8 @@
 
                                     <input type="checkbox" />
 
+ 
+
                                     <div class="control__indicator"></div>
 
                                 </label>
@@ -1668,9 +2276,9 @@
 
                             </div>
 
- 
-
 <div
+
+ 
 
                                 id="security-6-container"
 
@@ -1678,11 +2286,17 @@
 
                            >
 
+ 
+
                                 <div class="flex items-center w-full">
+
+ 
 
                                 <label
 
                                     class="w-1/3 text-right mr-4 font-bold"
+
+ 
 
                                     for="security-6-address"
 
@@ -1690,15 +2304,21 @@
 
                                 >
 
- 
-
                                 <input
+
+ 
 
                                     class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
 
+ 
+
                                     type="text"
 
+ 
+
                                     id="security-6-address"
+
+ 
 
                                     value=""
 
@@ -1708,63 +2328,103 @@
 
 </div>
 
-<div class="flex items-center w-full">
+ 
 
-  
+<div class="flex items-center w-full">
 
    <div class="w-1/3 mr-4"></div>
 
    <div class="w-2/3 flex text-left justify-center">
 
+ 
+
                 <div class="mt-1 w-full px-4">
 
+ 
+
                     <label class="control control--radio"
+
+ 
 
                         >Refinance
 
                         <input type="radio" name="security-6-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
+
+ 
 
                     </label>
 
                     <label class="control control--radio"
 
+ 
+
                         >Purchase
 
                         <input type="radio" name="security-6-radio-purpose" />
 
+ 
+
                         <div class="control__indicator"></div>
 
+ 
+
                     </label>
+
+ 
 
             <label class="control control--radio"
 
+ 
+
                         >Further Advance
 
+ 
+
                         <input type="radio" name="security-6-radio-purpose" />
+
+ 
 
                         <div class="control__indicator"></div>
 
                     </label>
+
+ 
 
       <label class="control control--radio"
 
                         >Clear Title
 
+ 
+
                         <input type="radio" name="security-6-radio-purpose" />
 
                         <div class="control__indicator"></div>
 
+ 
+
                     </label>
+
+ 
 
 </div>
 
-                <div class="mt-1 w-full px-4">                                   
+ 
+
+                <div class="mt-1 w-full px-4">                                  
+
+ 
 
                                 <label
 
+ 
+
                                 id="security-6-checkbox-vacant-land"
+
+ 
 
                                     class="control control--checkbox"
 
@@ -1772,25 +2432,41 @@
 
                                     <input type="checkbox" />
 
+ 
+
                                     <div class="control__indicator"></div>
+
+ 
 
                                 </label>
 
+ 
+
                                 <label
+
+ 
 
                                 id="security-6-checkbox-construction"
 
                                     class="control control--checkbox"
 
+ 
+
                                     >Construction
 
                                     <input type="checkbox" />
+
+ 
 
                                     <div class="control__indicator"></div>
 
                                 </label>
 
+ 
+
       <label
+
+ 
 
                                 id="security-6-checkbox-unregistered"
 
@@ -1798,13 +2474,19 @@
 
                                     >Unregistered / Proposed
 
+ 
+
                                     <input type="checkbox" />
 
                                     <div class="control__indicator"></div>
 
+ 
+
                                 </label>
 
      </div>
+
+ 
 
 </div>
 
@@ -1812,21 +2494,19 @@
 
                             </div>
 
-                         
-
-                         
-
  
 
                             <!-- security button -->
 
- 
-
                             <div
+
+ 
 
                                id="security-button-container"
 
                                 class="flex items-center w-full"
+
+ 
 
                             >
 
@@ -1834,17 +2514,27 @@
 
  
 
+ 
+
                                 <div class="w-2/3 flex">
+
+ 
 
                                     <button
 
                                         id="add-security-button"
 
+ 
+
                                         class="rounded font-semibold py-1 w-1/2 mr-1 outline-none focus:outline-none"
 
                                     >
 
+ 
+
                                         Add Security
+
+ 
 
                                     </button>
 
@@ -1852,7 +2542,11 @@
 
                                     <button
 
+ 
+
                                         id="remove-security-button"
+
+ 
 
                                         class="rounded font-semibold py-1 w-1/2 outline-none focus:outline-none disable-button"
 
@@ -1860,7 +2554,11 @@
 
                                         Remove Security
 
+ 
+
                                     </button>
+
+ 
 
                                 </div>
 
@@ -1868,7 +2566,11 @@
 
                         </div>
 
+ 
+
                     </div>
+
+ 
 
                 </div>
 
@@ -1880,13 +2582,17 @@
 
         <!-- caseflow section -->
 
- 
-
         <section id="caseflow-section" class="text-center">
+
+ 
 
             <div class="container py-16 mx-auto">
 
+ 
+
                 <div id="caseflow-container" class="bg-gray-900 p-4">
+
+ 
 
                     <ul id="caseflow-tabs" class="flex">
 
@@ -1896,63 +2602,87 @@
 
                             class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4 selected-tab"
 
+ 
+
                         >
+
+ 
 
                             ABL - General
 
                         </li>
 
- 
-
                         <li
+
+ 
 
                             id="tab-2"
 
+ 
+
                             class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
 
                         >
-
-                            Security
-
-                        </li>
 
  
 
+                            Security
+
+ 
+
+                        </li>
+
                         <li
 
+ 
+
                             id="tab-3"
+
+ 
 
                             class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
 
                         >
+
+ 
 
                             Tax Invoice
 
                         </li>
 
- 
-
                         <li
+
+ 
 
                             id="tab-4"
 
+ 
+
                             class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
 
                         >
-
-                            Fees
-
-                        </li>
 
  
 
+                            Fees
+
+ 
+
+                        </li>
+
                         <li
 
+ 
+
                             id="tab-5"
+
+ 
 
                             class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
 
                         >
+
+ 
 
                             Loan
 
@@ -1962,7 +2692,11 @@
 
                         <li
 
+ 
+
                             id="tab-6"
+
+ 
 
                             class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
 
@@ -1976,7 +2710,11 @@
 
                         <li
 
+ 
+
                             id="tab-7"
+
+ 
 
                             class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
 
@@ -1984,13 +2722,15 @@
 
                             Settlement
 
-                        </li>
-
  
+
+                        </li>
 
                         <li
 
                             id="tab-8"
+
+ 
 
                             class="caseflow-tab mr-1 bg-white font-semibold py-3 px-4"
 
@@ -2000,17 +2740,23 @@
 
                         </li>
 
-                    </ul>
-
  
 
+                    </ul>
+
                     <ul id="caseflow-tabs-content">
+
+ 
 
                         <li
 
                             id="tab-1-content"
 
+ 
+
                             class="caseflow-tabs-content bg-white p-8"
+
+ 
 
                         >
 
@@ -2020,7 +2766,11 @@
 
                                 class="flex flex-col w-3/4 mx-auto"
 
+ 
+
                             >
+
+ 
 
                                 <div
 
@@ -2028,11 +2778,17 @@
 
                                     class="flex mb-4 items-center"
 
+ 
+
                                 >
 
                                     <label
 
+ 
+
                                         class="w-1/3 text-right mr-4 font-bold"
+
+ 
 
                                         for="select-mortgage-manager"
 
@@ -2040,9 +2796,9 @@
 
                                     >
 
- 
-
                                     <div class="relative w-2/3">
+
+ 
 
                                         <select
 
@@ -2054,8 +2810,6 @@
 
                                             <option>- N/A -</option>
 
- 
-
                                             <option>AFM/NMC</option>
 
  
@@ -2066,13 +2820,13 @@
 
                                             >
 
- 
-
                                             <option>Better Choice</option>
 
  
 
                                             <option
+
+ 
 
                                                 >Better Mortgage
 
@@ -2080,15 +2834,11 @@
 
                                             >
 
- 
-
                                             <option>Credabl</option>
 
  
 
                                             <option>MBA / One26</option>
-
- 
 
                                             <option>MEZY</option>
 
@@ -2100,15 +2850,11 @@
 
                                             >
 
- 
-
                                             <option
 
                                                 >Mortgage House (MMM)</option
 
                                             >
-
- 
 
                                             <option>My Budget</option>
 
@@ -2140,6 +2886,8 @@
 
                                             </svg>
 
+ 
+
                                         </div>
 
                                     </div>
@@ -2153,6 +2901,8 @@
                                     <p
 
                                         class="w-1/3 text-right my-0 mr-4 font-bold"
+
+ 
 
                                     >
 
@@ -2180,6 +2930,8 @@
 
                                     class="flex mb-4 items-center"
 
+ 
+
                                 >
 
                                     <p
@@ -2192,9 +2944,9 @@
 
                                     </p>
 
- 
-
                                     <p class="w-2/3 text-left my-0">
+
+ 
 
                                         - Check Instructions / COS for
 
@@ -2204,9 +2956,9 @@
 
                                 </div>
 
- 
-
                                 <div id="author-paralegal-container" class="">
+
+ 
 
                                     <div class="flex mb-1 items-center">
 
@@ -2214,15 +2966,17 @@
 
                                             class="w-1/3 text-right mr-4 font-bold"
 
+ 
+
                                             for="paralegal-name"
 
                                             >Paralegal</label
 
                                         >
 
- 
-
                                         <input
+
+ 
 
                                             class="w-2/3 bg-gray-200 py-1 px-2 leading-tight outline-none focus:outline-none focus:bg-white"
 
@@ -2234,33 +2988,43 @@
 
                                             placeholder="XXX"
 
-                                        />
+ 
 
-                                    </div>
+                                        />
 
  
 
+                                    </div>
+
                                     <div class="flex mb-1 items-center">
+
+ 
 
                                         <label
 
                                             class="w-1/3 text-right mr-4 font-bold"
 
+ 
+
                                             for="team-leader"
 
                                             >Team Leader</label
 
-                                        >
-
  
 
+                                        >
+
                                         <input
+
+ 
 
                                             class="w-2/3 bg-gray-400 py-1 px-2 leading-tight outline-none border-gray-400 cursor-not-allowed"
 
                                             type="text"
 
                                             id="team-leader"
+
+ 
 
                                             value=""
 
@@ -2270,15 +3034,19 @@
 
                                         />
 
-                                    </div>
-
  
 
+                                    </div>
+
                                     <div class="flex items-center">
+
+ 
 
                                         <label
 
                                             class="w-1/3 text-right mr-4 font-bold"
+
+ 
 
                                             for="admin-assistant"
 
@@ -2290,33 +3058,51 @@
 
                                         <input
 
+ 
+
                                             class="w-2/3 bg-gray-400 py-1 px-2 leading-tight outline-none border-gray-400 cursor-not-allowed"
 
+ 
+
                                             type="text"
+
+ 
 
                                             id="admin-assistant"
 
                                             value=""
 
+ 
+
                                             placeholder=""
 
+ 
+
                                             disabled
+
+ 
 
                                         />
 
                                     </div>
 
+ 
+
                                 </div>
 
                             </div>
 
-                        </li>
-
  
+
+                        </li>
 
                         <li
 
+ 
+
                             id="tab-2-content"
+
+ 
 
                             class="caseflow-tabs-content bg-white p-8 hidden"
 
@@ -2330,6 +3116,8 @@
 
                         <li
 
+ 
+
                             id="tab-3-content"
 
                             class="caseflow-tabs-content bg-white p-8 hidden"
@@ -2339,8 +3127,6 @@
                             Tab 3
 
                         </li>
-
- 
 
                         <li
 
@@ -2354,8 +3140,6 @@
 
                         </li>
 
- 
-
                         <li
 
                             id="tab-5-content"
@@ -2367,8 +3151,6 @@
                             Tab 5
 
                         </li>
-
- 
 
                         <li
 
@@ -2382,8 +3164,6 @@
 
                         </li>
 
- 
-
                         <li
 
                             id="tab-7-content"
@@ -2395,8 +3175,6 @@
                             Tab 7
 
                         </li>
-
- 
 
                         <li
 
