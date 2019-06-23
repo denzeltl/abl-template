@@ -22,14 +22,42 @@ for (let i = 1; i < 7; i++) {
     let security = document.querySelector(`#security-${i}-container`);
     securityContainerArr.push(security);
 }
-let securityAddressArr = [];
+const securityAddressArr = [];
 for (let i = 1; i < 7; i++) {
     let securityAddress = document.querySelector(`#security-${i}-address`);
     securityAddressArr.push(securityAddress);
 }
-let securityFullAddressArr = [];
+const securityFullAddressArr = [];
 const addSecurityBtn = document.querySelector("#add-security-button");
 const removeSecurityBtn = document.querySelector("#remove-security-button");
+// security purpose
+const securityPurpose = [];
+const securityPurposeRefinance = [];
+for (let i = 1; i < 7; i++) {
+    let securityPurpose = document.querySelector(
+        `#security-${i}-radio-refinance`
+    );
+    securityPurposeRefinance.push(securityPurpose);
+}
+const securityPurposePurchase = [];
+for (let i = 1; i < 7; i++) {
+    let securityPurpose = document.querySelector(
+        `#security-${i}-radio-purchase`
+    );
+    securityPurposePurchase.push(securityPurpose);
+}
+const securityPurposeFurther = [];
+for (let i = 1; i < 7; i++) {
+    let securityPurpose = document.querySelector(
+        `#security-${i}-radio-further`
+    );
+    securityPurposeFurther.push(securityPurpose);
+}
+const securityPurposeClear = [];
+for (let i = 1; i < 7; i++) {
+    let securityPurpose = document.querySelector(`#security-${i}-radio-clear`);
+    securityPurposeClear.push(securityPurpose);
+}
 
 // caseflow variables
 const inputParalegal = document.querySelector("#paralegal-name");
@@ -66,14 +94,215 @@ for (let i = 0; i < 6; i++) {
 for (let i = 0; i < 6; i++) {
     let obj = {};
     securityAddressArr[i].addEventListener("change", function(e) {
-        let securityAdress = e.target.value
+        let securityAddress = e.target.value
             .toLowerCase()
             .split(" ")
             .map(s => s.charAt(0).toUpperCase() + s.substring(1));
-        obj["postalCode"] = securityAdress.pop();
-        // obj["middleName"] = borrowerFullName.join(" ");
+        obj["postalCode"] = securityAddress.pop();
+        obj["state"] = securityAddress.pop().toUpperCase();
+        if (securityAddress.includes("Alley")) {
+            const pattern = "Alley";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Arcade")) {
+            const pattern = "Arcade";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Avenue")) {
+            const pattern = "Avenue";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Boulevard")) {
+            const pattern = "Boulevard";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Bypass")) {
+            const pattern = "Bypass";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Circuit")) {
+            const pattern = "Circuit";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Close")) {
+            const pattern = "Close";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Corner")) {
+            const pattern = "Corner";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Court")) {
+            const pattern = "Court";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Crescent")) {
+            const pattern = "Crescent";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Cul-de-sac")) {
+            const pattern = "Cul-de-sac";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Drive")) {
+            const pattern = "Drive";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Esplanade")) {
+            const pattern = "Esplanade";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Green")) {
+            const pattern = "Green";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Grove")) {
+            const pattern = "Grove";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Highway")) {
+            const pattern = "Highway";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Junction")) {
+            const pattern = "Junction";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Lane")) {
+            const pattern = "Lane";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Link")) {
+            const pattern = "Link";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Mews")) {
+            const pattern = "Mews";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Parade")) {
+            const pattern = "Parade";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Place")) {
+            const pattern = "Place";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Ridge")) {
+            const pattern = "Ridge";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Road")) {
+            const pattern = "Road";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Square")) {
+            const pattern = "Square";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Street")) {
+            const pattern = "Street";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        } else if (securityAddress.includes("Terrace")) {
+            const pattern = "Terrace";
+            obj["suburb"] = securityAddress
+                .splice(securityAddress.indexOf(pattern) + 1)
+                .join(" ");
+        }
+        obj["secAddress"] = securityAddress.join(" ");
+        if (obj.secAddress.includes("Unit")) {
+            obj.secAddress;
+        } else if (obj.secAddress.includes("/")) {
+            obj.secAddress = `Unit ${obj.secAddress}`;
+        }
     });
     securityFullAddressArr.push(obj);
+}
+// securities purpose
+for (let i = 0; i < 6; i++) {
+    securityPurposeRefinance[i].addEventListener("change", e => {
+        if ((e.target.checked = true)) {
+            securityPurpose[i] = "Refinance";
+            if (securityPurpose.includes("Purchase")) {
+                document
+                    .querySelector("#solicitor-details-container")
+                    .classList.remove("hidden");
+            } else if (!securityPurpose.includes("Purchase")) {
+                document
+                    .querySelector("#solicitor-details-container")
+                    .classList.add("hidden");
+            }
+        }
+    });
+    securityPurposePurchase[i].addEventListener("change", e => {
+        if ((e.target.checked = true)) {
+            securityPurpose[i] = "Purchase";
+            if (securityPurpose.includes("Purchase")) {
+                document
+                    .querySelector("#solicitor-details-container")
+                    .classList.remove("hidden");
+            } else if (!securityPurpose.includes("Purchase")) {
+                document
+                    .querySelector("#solicitor-details-container")
+                    .classList.add("hidden");
+            }
+        }
+    });
+    securityPurposeFurther[i].addEventListener("change", e => {
+        if ((e.target.checked = true)) {
+            securityPurpose[i] = "Further Advance";
+            if (securityPurpose.includes("Purchase")) {
+                document
+                    .querySelector("#solicitor-details-container")
+                    .classList.remove("hidden");
+            } else if (!securityPurpose.includes("Purchase")) {
+                document
+                    .querySelector("#solicitor-details-container")
+                    .classList.add("hidden");
+            }
+        }
+    });
+    securityPurposeClear[i].addEventListener("change", e => {
+        if ((e.target.checked = true)) {
+            securityPurpose[i] = "Clear Title";
+            if (securityPurpose.includes("Purchase")) {
+                document
+                    .querySelector("#solicitor-details-container")
+                    .classList.remove("hidden");
+            } else if (!securityPurpose.includes("Purchase")) {
+                document
+                    .querySelector("#solicitor-details-container")
+                    .classList.add("hidden");
+            }
+        }
+    });
 }
 
 function pasteBorrowerOneName() {
@@ -197,7 +426,7 @@ function hideContentsOfTabs() {
 
 inputParalegal.addEventListener("change", function(e) {
     if (e.target.value.toUpperCase() == "ARD") {
-        document.querySelector("#team-leader").value = "   ";
+        document.querySelector("#team-leader").value = "  ";
 
         document.querySelector("#admin-assistant").value = "KED";
 
@@ -207,7 +436,7 @@ inputParalegal.addEventListener("change", function(e) {
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "CYS") {
-        document.querySelector("#team-leader").value = "   ";
+        document.querySelector("#team-leader").value = "  ";
 
         document.querySelector("#admin-assistant").value = "AYF";
 
@@ -217,7 +446,7 @@ inputParalegal.addEventListener("change", function(e) {
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "TMO") {
-        document.querySelector("#team-leader").value = "   ";
+        document.querySelector("#team-leader").value = "  ";
 
         document.querySelector("#admin-assistant").value = "IXC";
 
@@ -227,7 +456,7 @@ inputParalegal.addEventListener("change", function(e) {
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "MEF") {
-        document.querySelector("#team-leader").value = "   ";
+        document.querySelector("#team-leader").value = "  ";
 
         document.querySelector("#admin-assistant").value = "KXP";
 
@@ -237,7 +466,7 @@ inputParalegal.addEventListener("change", function(e) {
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "LMA") {
-        document.querySelector("#team-leader").value = "   ";
+        document.querySelector("#team-leader").value = "  ";
 
         document.querySelector("#admin-assistant").value = "RXW";
 
