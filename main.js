@@ -65,11 +65,21 @@ const caseflowTabs = document.querySelectorAll(".caseflow-tab");
 const caseflowTabsContents = document.querySelectorAll(
     ".caseflow-tabs-content"
 );
+const loanAmount = document.querySelector("#loan-amount");
+const loanPurpose = document.querySelector("#loan-purpose");
 
 // matter number event listener
 matterNumber.addEventListener("change", e => {
     let matter = e.target.value;
     latagHeader.textContent = matter + " - ";
+});
+
+// left content inputs event listers
+loanAmount.addEventListener("change", function(e) {
+    document.querySelector("#loan-amount-content").value = e.target.value;
+});
+loanPurpose.addEventListener("change", function(e) {
+    document.querySelector("#loan-purpose-content").value = e.target.value;
 });
 
 // borrower names event listener
@@ -254,9 +264,15 @@ for (let i = 0; i < 6; i++) {
                 document
                     .querySelector("#solicitor-details-container")
                     .classList.remove("hidden");
+                document
+                    .querySelector("#contract-date-container")
+                    .classList.remove("hidden");
             } else if (!securityPurpose.includes("Purchase")) {
                 document
                     .querySelector("#solicitor-details-container")
+                    .classList.add("hidden");
+                document
+                    .querySelector("#contract-date-container")
                     .classList.add("hidden");
             }
         }
@@ -268,9 +284,15 @@ for (let i = 0; i < 6; i++) {
                 document
                     .querySelector("#solicitor-details-container")
                     .classList.remove("hidden");
+                document
+                    .querySelector("#contract-date-container")
+                    .classList.remove("hidden");
             } else if (!securityPurpose.includes("Purchase")) {
                 document
                     .querySelector("#solicitor-details-container")
+                    .classList.add("hidden");
+                document
+                    .querySelector("#contract-date-container")
                     .classList.add("hidden");
             }
         }
@@ -282,9 +304,15 @@ for (let i = 0; i < 6; i++) {
                 document
                     .querySelector("#solicitor-details-container")
                     .classList.remove("hidden");
+                document
+                    .querySelector("#contract-date-container")
+                    .classList.remove("hidden");
             } else if (!securityPurpose.includes("Purchase")) {
                 document
                     .querySelector("#solicitor-details-container")
+                    .classList.add("hidden");
+                document
+                    .querySelector("#contract-date-container")
                     .classList.add("hidden");
             }
         }
@@ -296,9 +324,15 @@ for (let i = 0; i < 6; i++) {
                 document
                     .querySelector("#solicitor-details-container")
                     .classList.remove("hidden");
+                document
+                    .querySelector("#contract-date-container")
+                    .classList.remove("hidden");
             } else if (!securityPurpose.includes("Purchase")) {
                 document
                     .querySelector("#solicitor-details-container")
+                    .classList.add("hidden");
+                document
+                    .querySelector("#contract-date-container")
                     .classList.add("hidden");
             }
         }
