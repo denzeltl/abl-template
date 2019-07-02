@@ -1,6 +1,7 @@
 let latagHeader = document.querySelector("#latag-header");
 latagHeader.textContent = " - ";
 const matterNumber = document.querySelector("#matter-number");
+
 // borrower variables
 const borrowerContainerArr = [];
 for (let i = 1; i < 7; i++) {
@@ -30,6 +31,7 @@ for (let i = 1; i < 7; i++) {
 const securityFullAddressArr = [];
 const addSecurityBtn = document.querySelector("#add-security-button");
 const removeSecurityBtn = document.querySelector("#remove-security-button");
+
 // security purpose
 const securityPurpose = [];
 const securityPurposeRefinance = [];
@@ -255,6 +257,7 @@ for (let i = 0; i < 6; i++) {
     });
     securityFullAddressArr.push(obj);
 }
+
 // securities purpose
 for (let i = 0; i < 6; i++) {
     securityPurposeRefinance[i].addEventListener("change", e => {
@@ -338,7 +341,6 @@ for (let i = 0; i < 6; i++) {
         }
     });
 }
-
 function pasteBorrowerOneName() {
     latagHeader.textContent += borrowerFullNamesArr[0].lastName;
     document.title = `${
@@ -368,23 +370,46 @@ addBorrowerBtn.addEventListener("click", () => {
     }
 });
 removeBorrowerBtn.addEventListener("click", () => {
-    if (borrowerContainerArr[5].classList.contains("not-hidden")) {
-        borrowerContainerArr[5].classList.add("hidden");
-        borrowerContainerArr[5].classList.remove("not-hidden");
-        addBorrowerBtn.classList.remove("disable-button");
-    } else if (borrowerContainerArr[4].classList.contains("not-hidden")) {
-        borrowerContainerArr[4].classList.add("hidden");
-        borrowerContainerArr[4].classList.remove("not-hidden");
-    } else if (borrowerContainerArr[3].classList.contains("not-hidden")) {
-        borrowerContainerArr[3].classList.add("hidden");
-        borrowerContainerArr[3].classList.remove("not-hidden");
-    } else if (borrowerContainerArr[2].classList.contains("not-hidden")) {
-        borrowerContainerArr[2].classList.add("hidden");
-        borrowerContainerArr[2].classList.remove("not-hidden");
-    } else if (borrowerContainerArr[1].classList.contains("not-hidden")) {
-        borrowerContainerArr[1].classList.add("hidden");
-        borrowerContainerArr[1].classList.remove("not-hidden");
-        removeBorrowerBtn.classList.add("disable-button");
+    if (removeBorrowerBtn.classList.contains("disable-button")) {
+    } else if (confirm("Remove Borrower?")) {
+        if (borrowerContainerArr[5].classList.contains("not-hidden")) {
+            borrowerContainerArr[5].classList.add("hidden");
+            borrowerContainerArr[5].classList.remove("not-hidden");
+            document.querySelector("#borrower-6-name").value = "";
+            document.querySelector("#borrower-6-salutation").value =
+                "select-na";
+            borrowerFullNamesArr.pop();
+            addBorrowerBtn.classList.remove("disable-button");
+        } else if (borrowerContainerArr[4].classList.contains("not-hidden")) {
+            borrowerContainerArr[4].classList.add("hidden");
+            borrowerContainerArr[4].classList.remove("not-hidden");
+            document.querySelector("#borrower-5-name").value = "";
+            document.querySelector("#borrower-5-salutation").value =
+                "select-na";
+            borrowerFullNamesArr.pop();
+        } else if (borrowerContainerArr[3].classList.contains("not-hidden")) {
+            borrowerContainerArr[3].classList.add("hidden");
+            borrowerContainerArr[3].classList.remove("not-hidden");
+            document.querySelector("#borrower-4-name").value = "";
+            document.querySelector("#borrower-4-salutation").value =
+                "select-na";
+            borrowerFullNamesArr.pop();
+        } else if (borrowerContainerArr[2].classList.contains("not-hidden")) {
+            borrowerContainerArr[2].classList.add("hidden");
+            borrowerContainerArr[2].classList.remove("not-hidden");
+            document.querySelector("#borrower-3-name").value = "";
+            document.querySelector("#borrower-3-salutation").value =
+                "select-na";
+            borrowerFullNamesArr.pop();
+        } else if (borrowerContainerArr[1].classList.contains("not-hidden")) {
+            borrowerContainerArr[1].classList.add("hidden");
+            borrowerContainerArr[1].classList.remove("not-hidden");
+            document.querySelector("#borrower-2-name").value = "";
+            document.querySelector("#borrower-2-salutation").value =
+                "select-na";
+            borrowerFullNamesArr.pop();
+            removeBorrowerBtn.classList.add("disable-button");
+        }
     }
 });
 
@@ -410,334 +435,303 @@ addSecurityBtn.addEventListener("click", () => {
     }
 });
 removeSecurityBtn.addEventListener("click", () => {
-    if (securityContainerArr[5].classList.contains("not-hidden")) {
-        securityContainerArr[5].classList.add("hidden");
-        securityContainerArr[5].classList.remove("not-hidden");
-        addSecurityBtn.classList.remove("disable-button");
-    } else if (securityContainerArr[4].classList.contains("not-hidden")) {
-        securityContainerArr[4].classList.add("hidden");
-        securityContainerArr[4].classList.remove("not-hidden");
-    } else if (securityContainerArr[3].classList.contains("not-hidden")) {
-        securityContainerArr[3].classList.add("hidden");
-        securityContainerArr[3].classList.remove("not-hidden");
-    } else if (securityContainerArr[2].classList.contains("not-hidden")) {
-        securityContainerArr[2].classList.add("hidden");
-        securityContainerArr[2].classList.remove("not-hidden");
-    } else if (securityContainerArr[1].classList.contains("not-hidden")) {
-        securityContainerArr[1].classList.add("hidden");
-        securityContainerArr[1].classList.remove("not-hidden");
-        removeSecurityBtn.classList.add("disable-button");
+    if (removeSecurityBtn.classList.contains("disable-button")) {
+    } else if (confirm("Remove Security?")) {
+        if (securityContainerArr[5].classList.contains("not-hidden")) {
+            securityContainerArr[5].classList.add("hidden");
+            securityContainerArr[5].classList.remove("not-hidden");
+            document.querySelector("#security-6-address").value = "";
+            securityFullAddressArr.pop();
+            document.querySelector(
+                "#security-6-radio-refinance"
+            ).checked = false;
+            document.querySelector(
+                "#security-6-radio-purchase"
+            ).checked = false;
+            document.querySelector("#security-6-radio-further").checked = false;
+            document.querySelector("#security-6-radio-clear").checked = false;
+            securityPurpose.pop();
+            console.log(securityPurpose);
+            addSecurityBtn.classList.remove("disable-button");
+        } else if (securityContainerArr[4].classList.contains("not-hidden")) {
+            securityContainerArr[4].classList.add("hidden");
+            securityContainerArr[4].classList.remove("not-hidden");
+            document.querySelector("#security-5-address").value = "";
+            securityFullAddressArr.pop();
+            document.querySelector(
+                "#security-5-radio-refinance"
+            ).checked = false;
+            document.querySelector(
+                "#security-5-radio-purchase"
+            ).checked = false;
+            document.querySelector("#security-5-radio-further").checked = false;
+            document.querySelector("#security-5-radio-clear").checked = false;
+            securityPurpose.pop();
+        } else if (securityContainerArr[3].classList.contains("not-hidden")) {
+            securityContainerArr[3].classList.add("hidden");
+            securityContainerArr[3].classList.remove("not-hidden");
+            document.querySelector("#security-4-address").value = "";
+            securityFullAddressArr.pop();
+            document.querySelector(
+                "#security-4-radio-refinance"
+            ).checked = false;
+            document.querySelector(
+                "#security-4-radio-purchase"
+            ).checked = false;
+            document.querySelector("#security-4-radio-further").checked = false;
+            document.querySelector("#security-4-radio-clear").checked = false;
+            securityPurpose.pop();
+        } else if (securityContainerArr[2].classList.contains("not-hidden")) {
+            securityContainerArr[2].classList.add("hidden");
+            securityContainerArr[2].classList.remove("not-hidden");
+            document.querySelector("#security-3-address").value = "";
+            securityFullAddressArr.pop();
+            document.querySelector(
+                "#security-3-radio-refinance"
+            ).checked = false;
+            document.querySelector(
+                "#security-3-radio-purchase"
+            ).checked = false;
+            document.querySelector("#security-3-radio-further").checked = false;
+            document.querySelector("#security-3-radio-clear").checked = false;
+            securityPurpose.pop();
+        } else if (securityContainerArr[1].classList.contains("not-hidden")) {
+            securityContainerArr[1].classList.add("hidden");
+            securityContainerArr[1].classList.remove("not-hidden");
+            document.querySelector("#security-2-address").value = "";
+            securityFullAddressArr.pop();
+            document.querySelector(
+                "#security-2-radio-refinance"
+            ).checked = false;
+            document.querySelector(
+                "#security-2-radio-purchase"
+            ).checked = false;
+            document.querySelector("#security-2-radio-further").checked = false;
+            document.querySelector("#security-2-radio-clear").checked = false;
+            securityPurpose.pop();
+            removeSecurityBtn.classList.add("disable-button");
+        }
     }
 });
-
 // tabs contents functions
 caseflowTabs.forEach(tab => {
     tab.addEventListener("click", selectTab);
 });
-
 function selectTab() {
     hideContentsOfTabs();
     removeSelectedTabClass();
     this.classList.add("selected-tab");
     document.querySelector(`#${this.id}-content`).classList.remove("hidden");
 }
-
 // remove selected tab class
 function removeSelectedTabClass() {
     caseflowTabs.forEach(tab => {
         tab.classList.remove("selected-tab");
     });
 }
-
 // remove contents of tabs
 function hideContentsOfTabs() {
     caseflowTabsContents.forEach(content => {
         content.classList.add("hidden");
     });
 }
-
 // input paralegal function
-
 inputParalegal.addEventListener("change", function(e) {
     if (e.target.value.toUpperCase() == "ARD") {
         document.querySelector("#team-leader").value = "  ";
-
         document.querySelector("#admin-assistant").value = "KED";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "CYS") {
         document.querySelector("#team-leader").value = "  ";
-
         document.querySelector("#admin-assistant").value = "AYF";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "TMO") {
         document.querySelector("#team-leader").value = "  ";
-
         document.querySelector("#admin-assistant").value = "IXC";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "MEF") {
         document.querySelector("#team-leader").value = "  ";
-
         document.querySelector("#admin-assistant").value = "KXP";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "LMA") {
         document.querySelector("#team-leader").value = "  ";
-
         document.querySelector("#admin-assistant").value = "RXW";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "HXP") {
         document.querySelector("#team-leader").value = "TMO";
-
         document.querySelector("#admin-assistant").value = "IXC";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "KKM") {
         document.querySelector("#team-leader").value = "TMO";
-
         document.querySelector("#admin-assistant").value = "IXC";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "NVP") {
         document.querySelector("#team-leader").value = "MEF";
-
         document.querySelector("#admin-assistant").value = "KXP";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "DMP") {
         document.querySelector("#team-leader").value = "LMA";
-
         document.querySelector("#admin-assistant").value = "RXW";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "SXB") {
         document.querySelector("#team-leader").value = "LMA";
-
         document.querySelector("#admin-assistant").value = "RXW";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "LAM") {
         document.querySelector("#team-leader").value = "CYS";
-
         document.querySelector("#admin-assistant").value = "AYF";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "NHM") {
         document.querySelector("#team-leader").value = "CYS";
-
         document.querySelector("#admin-assistant").value = "AYF";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "NXA") {
         document.querySelector("#team-leader").value = "TMO";
-
         document.querySelector("#admin-assistant").value = "JXW";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "RHH") {
         document.querySelector("#team-leader").value = "TMO";
-
         document.querySelector("#admin-assistant").value = "JXW";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "VSA") {
         document.querySelector("#team-leader").value = "TMO";
-
         document.querySelector("#admin-assistant").value = "JXW";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "RMF") {
         document.querySelector("#team-leader").value = "TMO";
-
         document.querySelector("#admin-assistant").value = "OXO";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "RYE") {
         document.querySelector("#team-leader").value = "TMO";
-
         document.querySelector("#admin-assistant").value = "OXO";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "BJT") {
         document.querySelector("#team-leader").value = "MEF";
-
         document.querySelector("#admin-assistant").value = "NXL";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "CYM") {
         document.querySelector("#team-leader").value = "MEF";
-
         document.querySelector("#admin-assistant").value = "NXL";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "KDB") {
         document.querySelector("#team-leader").value = "MEF";
-
         document.querySelector("#admin-assistant").value = "NXL";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "SXF") {
         document.querySelector("#team-leader").value = "MEF";
-
         document.querySelector("#admin-assistant").value = "NXL";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "BYC") {
         document.querySelector("#team-leader").value = "CYS";
-
         document.querySelector("#admin-assistant").value = "AYF";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "CZL") {
         document.querySelector("#team-leader").value = "CYS";
-
         document.querySelector("#admin-assistant").value = "AYF";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "JNT") {
         document.querySelector("#team-leader").value = "CYS";
-
         document.querySelector("#admin-assistant").value = "AYF";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "RXA") {
         document.querySelector("#team-leader").value = "CYS";
-
         document.querySelector("#admin-assistant").value = "AYF";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "SXH") {
         document.querySelector("#team-leader").value = "ARD";
-
         document.querySelector("#admin-assistant").value = "RXW";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else if (e.target.value.toUpperCase() == "JML") {
         document.querySelector("#team-leader").value = "CYS";
-
         document.querySelector("#admin-assistant").value = "AYF";
-
         document.querySelector("#team-leader").classList.remove("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.remove("text-red-500");
     } else {
         document.querySelector("#team-leader").value =
             "Incorrect Initials of Paralegal";
-
         document.querySelector("#admin-assistant").value =
             "Incorrect Initials of Paralegal";
-
         document.querySelector("#team-leader").classList.add("text-red-500");
-
         document
             .querySelector("#admin-assistant")
             .classList.add("text-red-500");
