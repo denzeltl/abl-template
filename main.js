@@ -1,5 +1,5 @@
-let latagHeader = document.querySelector("#latag-header");
-latagHeader.textContent = " - ";
+let matterNumberHeader = document.querySelector("#matter-number-header");
+let lastNameHeader = document.querySelector("#last-name-header");
 const matterNumber = document.querySelector("#matter-number");
 
 // borrower variables
@@ -73,7 +73,7 @@ const loanPurpose = document.querySelector("#loan-purpose");
 // matter number event listener
 matterNumber.addEventListener("change", e => {
     let matter = e.target.value;
-    latagHeader.textContent = matter + " - ";
+    matterNumberHeader.textContent = matter;
 });
 
 // left content inputs event listers
@@ -342,7 +342,7 @@ for (let i = 0; i < 6; i++) {
     });
 }
 function pasteBorrowerOneName() {
-    latagHeader.textContent += borrowerFullNamesArr[0].lastName;
+    lastNameHeader.textContent = borrowerFullNamesArr[0].lastName;
     document.title = `${
         borrowerFullNamesArr[0].lastName
     }, ${borrowerFullNamesArr[0].firstName.charAt(0)}`;
