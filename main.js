@@ -102,6 +102,13 @@ for (let i = 0; i < 6; i++) {
     borrowerFullNamesArr.push(obj);
 }
 
+// borrower p containers
+const borrowerPContainersArr = [];
+for (let i = 1; i < 7; i++) {
+    let borrowerP = document.querySelector(`#borrower-${i}-p-container`);
+    borrowerPContainersArr.push(borrowerP);
+}
+
 // securities address event listener
 for (let i = 0; i < 6; i++) {
     let obj = {};
@@ -353,19 +360,24 @@ addBorrowerBtn.addEventListener("click", () => {
     if (borrowerContainerArr[1].classList.contains("hidden")) {
         borrowerContainerArr[1].classList.remove("hidden");
         borrowerContainerArr[1].classList.add("not-hidden");
+        borrowerPContainersArr[1].classList.remove("hidden");
         removeBorrowerBtn.classList.remove("disable-button");
     } else if (borrowerContainerArr[2].classList.contains("hidden")) {
         borrowerContainerArr[2].classList.remove("hidden");
         borrowerContainerArr[2].classList.add("not-hidden");
+        borrowerPContainersArr[2].classList.remove("hidden");
     } else if (borrowerContainerArr[3].classList.contains("hidden")) {
         borrowerContainerArr[3].classList.remove("hidden");
         borrowerContainerArr[3].classList.add("not-hidden");
+        borrowerPContainersArr[3].classList.remove("hidden");
     } else if (borrowerContainerArr[4].classList.contains("hidden")) {
         borrowerContainerArr[4].classList.remove("hidden");
         borrowerContainerArr[4].classList.add("not-hidden");
+        borrowerPContainersArr[4].classList.remove("hidden");
     } else if (borrowerContainerArr[5].classList.contains("hidden")) {
         borrowerContainerArr[5].classList.remove("hidden");
         borrowerContainerArr[5].classList.add("not-hidden");
+        borrowerPContainersArr[5].classList.remove("hidden");
         addBorrowerBtn.classList.add("disable-button");
     }
 });
@@ -375,6 +387,7 @@ removeBorrowerBtn.addEventListener("click", () => {
         if (borrowerContainerArr[5].classList.contains("not-hidden")) {
             borrowerContainerArr[5].classList.add("hidden");
             borrowerContainerArr[5].classList.remove("not-hidden");
+            borrowerPContainersArr[5].classList.add("hidden");
             document.querySelector("#borrower-6-name").value = "";
             document.querySelector("#borrower-6-salutation").value =
                 "select-na";
@@ -383,6 +396,7 @@ removeBorrowerBtn.addEventListener("click", () => {
         } else if (borrowerContainerArr[4].classList.contains("not-hidden")) {
             borrowerContainerArr[4].classList.add("hidden");
             borrowerContainerArr[4].classList.remove("not-hidden");
+            borrowerPContainersArr[4].classList.add("hidden");
             document.querySelector("#borrower-5-name").value = "";
             document.querySelector("#borrower-5-salutation").value =
                 "select-na";
@@ -390,6 +404,7 @@ removeBorrowerBtn.addEventListener("click", () => {
         } else if (borrowerContainerArr[3].classList.contains("not-hidden")) {
             borrowerContainerArr[3].classList.add("hidden");
             borrowerContainerArr[3].classList.remove("not-hidden");
+            borrowerPContainersArr[3].classList.add("hidden");
             document.querySelector("#borrower-4-name").value = "";
             document.querySelector("#borrower-4-salutation").value =
                 "select-na";
@@ -397,6 +412,7 @@ removeBorrowerBtn.addEventListener("click", () => {
         } else if (borrowerContainerArr[2].classList.contains("not-hidden")) {
             borrowerContainerArr[2].classList.add("hidden");
             borrowerContainerArr[2].classList.remove("not-hidden");
+            borrowerPContainersArr[2].classList.add("hidden");
             document.querySelector("#borrower-3-name").value = "";
             document.querySelector("#borrower-3-salutation").value =
                 "select-na";
@@ -404,6 +420,7 @@ removeBorrowerBtn.addEventListener("click", () => {
         } else if (borrowerContainerArr[1].classList.contains("not-hidden")) {
             borrowerContainerArr[1].classList.add("hidden");
             borrowerContainerArr[1].classList.remove("not-hidden");
+            borrowerPContainersArr[1].classList.add("hidden");
             document.querySelector("#borrower-2-name").value = "";
             document.querySelector("#borrower-2-salutation").value =
                 "select-na";
