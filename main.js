@@ -97,6 +97,28 @@ for (let i = 0; i < 6; i++) {
         obj["middleName"] = borrowerFullName.join(" ");
         if (this == document.querySelector("#borrower-1-name")) {
             pasteBorrowerOneName();
+            document.querySelector("#borrower-1-mailing-name").value = `${obj[
+                "firstName"
+            ].charAt(0)}${obj["middleName"]
+                .split(" ")
+                .map(s => s.charAt(0))
+                .join("")} ${obj["lastName"]}`;
+            document.querySelector("#borrower-1-first-name").value =
+                obj["firstName"];
+            document.querySelector("#borrower-1-middle-name").value =
+                obj["middleName"];
+            document.querySelector("#borrower-1-surname").value =
+                obj["lastName"];
+        } else if (this == document.querySelector("#borrower-2-name")) {
+            pasteBorrowerOneName();
+            document.querySelector("#borrower-2-mailing-name").value =
+                obj["firstName"];
+            document.querySelector("#borrower-2-first-name").value =
+                obj["firstName"];
+            document.querySelector("#borrower-2-middle-name").value =
+                obj["middleName"];
+            document.querySelector("#borrower-2-surname").value =
+                obj["lastName"];
         }
     });
     borrowerFullNamesArr.push(obj);
@@ -107,6 +129,15 @@ const borrowerPContainersArr = [];
 for (let i = 1; i < 7; i++) {
     let borrowerP = document.querySelector(`#borrower-${i}-p-container`);
     borrowerPContainersArr.push(borrowerP);
+}
+
+// security existing containers
+const securityExistingContainers = [];
+for (let i = 1; i < 7; i++) {
+    let securityExisting = document.querySelector(
+        `#security-${i}-existing-container`
+    );
+    securityExistingContainers.push(securityExisting);
 }
 
 // securities address event listener
@@ -435,19 +466,24 @@ addSecurityBtn.addEventListener("click", () => {
     if (securityContainerArr[1].classList.contains("hidden")) {
         securityContainerArr[1].classList.remove("hidden");
         securityContainerArr[1].classList.add("not-hidden");
+        securityExistingContainers[1].classList.remove("hidden");
         removeSecurityBtn.classList.remove("disable-button");
     } else if (securityContainerArr[2].classList.contains("hidden")) {
         securityContainerArr[2].classList.remove("hidden");
         securityContainerArr[2].classList.add("not-hidden");
+        securityExistingContainers[2].classList.remove("hidden");
     } else if (securityContainerArr[3].classList.contains("hidden")) {
         securityContainerArr[3].classList.remove("hidden");
         securityContainerArr[3].classList.add("not-hidden");
+        securityExistingContainers[3].classList.remove("hidden");
     } else if (securityContainerArr[4].classList.contains("hidden")) {
         securityContainerArr[4].classList.remove("hidden");
         securityContainerArr[4].classList.add("not-hidden");
+        securityExistingContainers[4].classList.remove("hidden");
     } else if (securityContainerArr[5].classList.contains("hidden")) {
         securityContainerArr[5].classList.remove("hidden");
         securityContainerArr[5].classList.add("not-hidden");
+        securityExistingContainers[5].classList.remove("hidden");
         addSecurityBtn.classList.add("disable-button");
     }
 });
@@ -457,6 +493,7 @@ removeSecurityBtn.addEventListener("click", () => {
         if (securityContainerArr[5].classList.contains("not-hidden")) {
             securityContainerArr[5].classList.add("hidden");
             securityContainerArr[5].classList.remove("not-hidden");
+            securityExistingContainers[5].classList.add("hidden");
             document.querySelector("#security-6-address").value = "";
             securityFullAddressArr.pop();
             document.querySelector(
@@ -473,6 +510,7 @@ removeSecurityBtn.addEventListener("click", () => {
         } else if (securityContainerArr[4].classList.contains("not-hidden")) {
             securityContainerArr[4].classList.add("hidden");
             securityContainerArr[4].classList.remove("not-hidden");
+            securityExistingContainers[4].classList.add("hidden");
             document.querySelector("#security-5-address").value = "";
             securityFullAddressArr.pop();
             document.querySelector(
@@ -487,6 +525,7 @@ removeSecurityBtn.addEventListener("click", () => {
         } else if (securityContainerArr[3].classList.contains("not-hidden")) {
             securityContainerArr[3].classList.add("hidden");
             securityContainerArr[3].classList.remove("not-hidden");
+            securityExistingContainers[3].classList.add("hidden");
             document.querySelector("#security-4-address").value = "";
             securityFullAddressArr.pop();
             document.querySelector(
@@ -501,6 +540,7 @@ removeSecurityBtn.addEventListener("click", () => {
         } else if (securityContainerArr[2].classList.contains("not-hidden")) {
             securityContainerArr[2].classList.add("hidden");
             securityContainerArr[2].classList.remove("not-hidden");
+            securityExistingContainers[2].classList.add("hidden");
             document.querySelector("#security-3-address").value = "";
             securityFullAddressArr.pop();
             document.querySelector(
@@ -515,6 +555,7 @@ removeSecurityBtn.addEventListener("click", () => {
         } else if (securityContainerArr[1].classList.contains("not-hidden")) {
             securityContainerArr[1].classList.add("hidden");
             securityContainerArr[1].classList.remove("not-hidden");
+            securityExistingContainers[1].classList.add("hidden");
             document.querySelector("#security-2-address").value = "";
             securityFullAddressArr.pop();
             document.querySelector(
