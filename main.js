@@ -8,6 +8,13 @@ for (let i = 1; i < 7; i++) {
     let borrower = document.querySelector(`#borrower-${i}-container`);
     borrowerContainerArr.push(borrower);
 }
+let borrowerSalutationsArr = [];
+for (let i = 1; i < 7; i++) {
+    let borrowerSalutation = document.querySelector(
+        `#borrower-${i}-salutation`
+    );
+    borrowerSalutationsArr.push(borrowerSalutation);
+}
 let borrowerNamesArr = [];
 for (let i = 1; i < 7; i++) {
     let borrowerName = document.querySelector(`#borrower-${i}-name`);
@@ -84,6 +91,62 @@ loanPurpose.addEventListener("change", function(e) {
     document.querySelector("#loan-purpose-content").value = e.target.value;
 });
 
+// borrower salutation event listener
+for (let i = 0; i < 6; i++) {
+    borrowerSalutationsArr[i].addEventListener("change", function(e) {
+        switch (e.target.value) {
+            case "select-mr":
+                document.querySelector(
+                    `#borrower-${i + 1}-mailing-name`
+                ).value = `Mr ${
+                    document.querySelector(`#borrower-${i + 1}-mailing-name`)
+                        .value
+                }`;
+                break;
+            case "select-mrs":
+                document.querySelector(
+                    `#borrower-${i + 1}-mailing-name`
+                ).value = `Mrs ${
+                    document.querySelector(`#borrower-${i + 1}-mailing-name`)
+                        .value
+                }`;
+                break;
+            case "select-ms":
+                document.querySelector(
+                    `#borrower-${i + 1}-mailing-name`
+                ).value =
+                    "Ms " +
+                    document.querySelector(`#borrower-${i + 1}-mailing-name`)
+                        .value;
+                break;
+            case "select-miss":
+                document.querySelector(
+                    `#borrower-${i + 1}-mailing-name`
+                ).value =
+                    "Miss " +
+                    document.querySelector(`#borrower-${i + 1}-mailing-name`)
+                        .value;
+                break;
+            case "select-dr":
+                document.querySelector(
+                    `#borrower-${i + 1}-mailing-name`
+                ).value =
+                    "Dr " +
+                    document.querySelector(`#borrower-${i + 1}-mailing-name`)
+                        .value;
+                break;
+            case "select-prof":
+                document.querySelector(
+                    `#borrower-${i + 1}-mailing-name`
+                ).value =
+                    "Prof " +
+                    document.querySelector(`#borrower-${i + 1}-mailing-name`)
+                        .value;
+                break;
+        }
+    });
+}
+
 // borrower names event listener
 for (let i = 0; i < 6; i++) {
     let obj = {};
@@ -110,14 +173,69 @@ for (let i = 0; i < 6; i++) {
             document.querySelector("#borrower-1-surname").value =
                 obj["lastName"];
         } else if (this == document.querySelector("#borrower-2-name")) {
-            pasteBorrowerOneName();
-            document.querySelector("#borrower-2-mailing-name").value =
-                obj["firstName"];
+            document.querySelector("#borrower-2-mailing-name").value = `${obj[
+                "firstName"
+            ].charAt(0)}${obj["middleName"]
+                .split(" ")
+                .map(s => s.charAt(0))
+                .join("")} ${obj["lastName"]}`;
             document.querySelector("#borrower-2-first-name").value =
                 obj["firstName"];
             document.querySelector("#borrower-2-middle-name").value =
                 obj["middleName"];
             document.querySelector("#borrower-2-surname").value =
+                obj["lastName"];
+        } else if (this == document.querySelector("#borrower-3-name")) {
+            document.querySelector("#borrower-3-mailing-name").value = `${obj[
+                "firstName"
+            ].charAt(0)}${obj["middleName"]
+                .split(" ")
+                .map(s => s.charAt(0))
+                .join("")} ${obj["lastName"]}`;
+            document.querySelector("#borrower-3-first-name").value =
+                obj["firstName"];
+            document.querySelector("#borrower-3-middle-name").value =
+                obj["middleName"];
+            document.querySelector("#borrower-3-surname").value =
+                obj["lastName"];
+        } else if (this == document.querySelector("#borrower-4-name")) {
+            document.querySelector("#borrower-4-mailing-name").value = `${obj[
+                "firstName"
+            ].charAt(0)}${obj["middleName"]
+                .split(" ")
+                .map(s => s.charAt(0))
+                .join("")} ${obj["lastName"]}`;
+            document.querySelector("#borrower-4-first-name").value =
+                obj["firstName"];
+            document.querySelector("#borrower-4-middle-name").value =
+                obj["middleName"];
+            document.querySelector("#borrower-4-surname").value =
+                obj["lastName"];
+        } else if (this == document.querySelector("#borrower-5-name")) {
+            document.querySelector("#borrower-5-mailing-name").value = `${obj[
+                "firstName"
+            ].charAt(0)}${obj["middleName"]
+                .split(" ")
+                .map(s => s.charAt(0))
+                .join("")} ${obj["lastName"]}`;
+            document.querySelector("#borrower-5-first-name").value =
+                obj["firstName"];
+            document.querySelector("#borrower-5-middle-name").value =
+                obj["middleName"];
+            document.querySelector("#borrower-5-surname").value =
+                obj["lastName"];
+        } else if (this == document.querySelector("#borrower-6-name")) {
+            document.querySelector("#borrower-6-mailing-name").value = `${obj[
+                "firstName"
+            ].charAt(0)}${obj["middleName"]
+                .split(" ")
+                .map(s => s.charAt(0))
+                .join("")} ${obj["lastName"]}`;
+            document.querySelector("#borrower-6-first-name").value =
+                obj["firstName"];
+            document.querySelector("#borrower-6-middle-name").value =
+                obj["middleName"];
+            document.querySelector("#borrower-6-surname").value =
                 obj["lastName"];
         }
     });
@@ -129,6 +247,13 @@ const borrowerPContainersArr = [];
 for (let i = 1; i < 7; i++) {
     let borrowerP = document.querySelector(`#borrower-${i}-p-container`);
     borrowerPContainersArr.push(borrowerP);
+}
+
+// security new containers
+const securityNewContainers = [];
+for (let i = 1; i < 7; i++) {
+    let securityNew = document.querySelector(`#security-${i}-new-container`);
+    securityNewContainers.push(securityNew);
 }
 
 // security existing containers
@@ -466,23 +591,28 @@ addSecurityBtn.addEventListener("click", () => {
     if (securityContainerArr[1].classList.contains("hidden")) {
         securityContainerArr[1].classList.remove("hidden");
         securityContainerArr[1].classList.add("not-hidden");
+        securityNewContainers[1].classList.remove("hidden");
         securityExistingContainers[1].classList.remove("hidden");
         removeSecurityBtn.classList.remove("disable-button");
     } else if (securityContainerArr[2].classList.contains("hidden")) {
         securityContainerArr[2].classList.remove("hidden");
         securityContainerArr[2].classList.add("not-hidden");
+        securityNewContainers[2].classList.remove("hidden");
         securityExistingContainers[2].classList.remove("hidden");
     } else if (securityContainerArr[3].classList.contains("hidden")) {
         securityContainerArr[3].classList.remove("hidden");
         securityContainerArr[3].classList.add("not-hidden");
+        securityNewContainers[3].classList.remove("hidden");
         securityExistingContainers[3].classList.remove("hidden");
     } else if (securityContainerArr[4].classList.contains("hidden")) {
         securityContainerArr[4].classList.remove("hidden");
         securityContainerArr[4].classList.add("not-hidden");
+        securityNewContainers[4].classList.remove("hidden");
         securityExistingContainers[4].classList.remove("hidden");
     } else if (securityContainerArr[5].classList.contains("hidden")) {
         securityContainerArr[5].classList.remove("hidden");
         securityContainerArr[5].classList.add("not-hidden");
+        securityNewContainers[5].classList.remove("hidden");
         securityExistingContainers[5].classList.remove("hidden");
         addSecurityBtn.classList.add("disable-button");
     }
@@ -493,6 +623,7 @@ removeSecurityBtn.addEventListener("click", () => {
         if (securityContainerArr[5].classList.contains("not-hidden")) {
             securityContainerArr[5].classList.add("hidden");
             securityContainerArr[5].classList.remove("not-hidden");
+            securityNewContainers[5].classList.add("hidden");
             securityExistingContainers[5].classList.add("hidden");
             document.querySelector("#security-6-address").value = "";
             securityFullAddressArr.pop();
@@ -510,6 +641,7 @@ removeSecurityBtn.addEventListener("click", () => {
         } else if (securityContainerArr[4].classList.contains("not-hidden")) {
             securityContainerArr[4].classList.add("hidden");
             securityContainerArr[4].classList.remove("not-hidden");
+            securityNewContainers[4].classList.add("hidden");
             securityExistingContainers[4].classList.add("hidden");
             document.querySelector("#security-5-address").value = "";
             securityFullAddressArr.pop();
@@ -525,6 +657,7 @@ removeSecurityBtn.addEventListener("click", () => {
         } else if (securityContainerArr[3].classList.contains("not-hidden")) {
             securityContainerArr[3].classList.add("hidden");
             securityContainerArr[3].classList.remove("not-hidden");
+            securityNewContainers[3].classList.add("hidden");
             securityExistingContainers[3].classList.add("hidden");
             document.querySelector("#security-4-address").value = "";
             securityFullAddressArr.pop();
@@ -540,6 +673,7 @@ removeSecurityBtn.addEventListener("click", () => {
         } else if (securityContainerArr[2].classList.contains("not-hidden")) {
             securityContainerArr[2].classList.add("hidden");
             securityContainerArr[2].classList.remove("not-hidden");
+            securityNewContainers[2].classList.add("hidden");
             securityExistingContainers[2].classList.add("hidden");
             document.querySelector("#security-3-address").value = "";
             securityFullAddressArr.pop();
@@ -555,6 +689,7 @@ removeSecurityBtn.addEventListener("click", () => {
         } else if (securityContainerArr[1].classList.contains("not-hidden")) {
             securityContainerArr[1].classList.add("hidden");
             securityContainerArr[1].classList.remove("not-hidden");
+            securityNewContainers[1].classList.add("hidden");
             securityExistingContainers[1].classList.add("hidden");
             document.querySelector("#security-2-address").value = "";
             securityFullAddressArr.pop();
