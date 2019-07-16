@@ -426,6 +426,25 @@ for (let i = 0; i < 6; i++) {
     securityPurposeRefinance[i].addEventListener("change", e => {
         if ((e.target.checked = true)) {
             securityPurpose[i] = "Refinance";
+            if ((securityPurpose[i] = "Refinance")) {
+                document
+                    .querySelector(`#security-${i + 1}-purchase-inputs`)
+                    .classList.add("hidden");
+                document.querySelector(
+                    `#security-${i + 1}-new-purpose`
+                ).textContent = "Refinance";
+                document.querySelector(
+                    `#security-${i + 1}-label-purpose`
+                ).textContent = "Refinance";
+                document
+                    .querySelector(
+                        `#security-${i + 1}-copy-as-special-condition`
+                    )
+                    .value("Yes");
+                document
+                    .querySelector(`#security-${i + 1}-existing-container`)
+                    .classList.remove("hidden");
+            }
             if (securityPurpose.includes("Purchase")) {
                 document
                     .querySelector("#solicitor-details-container")
@@ -446,6 +465,23 @@ for (let i = 0; i < 6; i++) {
     securityPurposePurchase[i].addEventListener("change", e => {
         if ((e.target.checked = true)) {
             securityPurpose[i] = "Purchase";
+            if ((securityPurpose[i] = "Purchase")) {
+                document
+                    .querySelector(`#security-${i + 1}-purchase-inputs`)
+                    .classList.remove("hidden");
+                document.querySelector(
+                    `#security-${i + 1}-new-purpose`
+                ).textContent = "Purchase";
+                document.querySelector(
+                    `#security-${i + 1}-label-purpose`
+                ).textContent = "Purchase";
+                document.querySelector(
+                    `#security-${i + 1}-copy-as-special-condition`
+                ).value = "Yes";
+                document
+                    .querySelector(`#security-${i + 1}-existing-container`)
+                    .classList.remove("hidden");
+            }
             if (securityPurpose.includes("Purchase")) {
                 document
                     .querySelector("#solicitor-details-container")
@@ -466,6 +502,23 @@ for (let i = 0; i < 6; i++) {
     securityPurposeFurther[i].addEventListener("change", e => {
         if ((e.target.checked = true)) {
             securityPurpose[i] = "Further Advance";
+            if ((securityPurpose[i] = "Further Advance")) {
+                document
+                    .querySelector(`#security-${i + 1}-purchase-inputs`)
+                    .classList.add("hidden");
+                document.querySelector(
+                    `#security-${i + 1}-new-purpose`
+                ).textContent = "Further Advance";
+                document.querySelector(
+                    `#security-${i + 1}-label-purpose`
+                ).textContent = "Further Advance";
+                document.querySelector(
+                    `#security-${i + 1}-copy-as-special-condition`
+                ).value = "No";
+                document
+                    .querySelector(`#security-${i + 1}-existing-container`)
+                    .classList.remove("hidden");
+            }
             if (securityPurpose.includes("Purchase")) {
                 document
                     .querySelector("#solicitor-details-container")
@@ -486,6 +539,23 @@ for (let i = 0; i < 6; i++) {
     securityPurposeClear[i].addEventListener("change", e => {
         if ((e.target.checked = true)) {
             securityPurpose[i] = "Clear Title";
+            if ((securityPurpose[i] = "Clear Title")) {
+                document
+                    .querySelector(`#security-${i + 1}-purchase-inputs`)
+                    .classList.add("hidden");
+                document.querySelector(
+                    `#security-${i + 1}-new-purpose`
+                ).textContent = "Clear Title";
+                document.querySelector(
+                    `#security-${i + 1}-label-purpose`
+                ).textContent = "Clear Title";
+                document.querySelector(
+                    `#security-${i + 1}-copy-as-special-condition`
+                ).value = "Yes";
+                document
+                    .querySelector(`#security-${i + 1}-existing-container`)
+                    .classList.add("hidden");
+            }
             if (securityPurpose.includes("Purchase")) {
                 document
                     .querySelector("#solicitor-details-container")
