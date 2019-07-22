@@ -270,6 +270,7 @@ for (let i = 0; i < 6; i++) {
     let obj = {};
     securityAddressArr[i].addEventListener("change", function(e) {
         let securityAddress = e.target.value
+            .replace(/,/g, "")
             .toLowerCase()
             .split(" ")
             .map(s => s.charAt(0).toUpperCase() + s.substring(1));
@@ -414,8 +415,24 @@ for (let i = 0; i < 6; i++) {
         obj["secAddress"] = securityAddress.join(" ");
         if (obj.secAddress.includes("Unit")) {
             obj.secAddress;
+            document.querySelector(`#security-${i + 1}-body-corporate`).value =
+                "Yes";
         } else if (obj.secAddress.includes("/")) {
             obj.secAddress = `Unit ${obj.secAddress}`;
+            document.querySelector(`#security-${i + 1}-body-corporate`).value =
+                "Yes";
+        } else {
+            document.querySelector(`#security-${i + 1}-body-corporate`).value =
+                "No";
+        }
+        if (this == document.querySelector(`#security-${i + 1}-address`)) {
+            document.querySelector(
+                `#security-${i + 1}-property-address`
+            ).value = obj.secAddress;
+            document.querySelector(`#security-${i + 1}-property-suburb`).value =
+                obj.suburb;
+            document.querySelector(`#security-${i + 1}-property-postal`).value =
+                obj.state + " " + obj.postalCode;
         }
     });
     securityFullAddressArr.push(obj);
@@ -436,11 +453,15 @@ for (let i = 0; i < 6; i++) {
                 document.querySelector(
                     `#security-${i + 1}-label-purpose`
                 ).textContent = "Refinance";
-                document
-                    .querySelector(
-                        `#security-${i + 1}-copy-as-special-condition`
-                    )
-                    .value("Yes");
+                document.querySelector(
+                    `#security-${i + 1}-rates-notice`
+                ).value = "Yes (recheck rates notice document)";
+                document.querySelector(
+                    `#security-${i + 1}-copy-as-special-condition`
+                ).value = "Yes (No - if there's amount for the loans)";
+                document.querySelector(
+                    `#security-${i + 1}-action-being-taken`
+                ).value = "1 - Release";
                 document
                     .querySelector(`#security-${i + 1}-existing-container`)
                     .classList.remove("hidden");
@@ -476,8 +497,14 @@ for (let i = 0; i < 6; i++) {
                     `#security-${i + 1}-label-purpose`
                 ).textContent = "Purchase";
                 document.querySelector(
+                    `#security-${i + 1}-rates-notice`
+                ).value = "DON'T CHANGE";
+                document.querySelector(
                     `#security-${i + 1}-copy-as-special-condition`
-                ).value = "Yes";
+                ).value = "No";
+                document.querySelector(
+                    `#security-${i + 1}-action-being-taken`
+                ).value = "1 - Release";
                 document
                     .querySelector(`#security-${i + 1}-existing-container`)
                     .classList.remove("hidden");
@@ -513,8 +540,14 @@ for (let i = 0; i < 6; i++) {
                     `#security-${i + 1}-label-purpose`
                 ).textContent = "Further Advance";
                 document.querySelector(
+                    `#security-${i + 1}-rates-notice`
+                ).value = "DON'T CHANGE";
+                document.querySelector(
                     `#security-${i + 1}-copy-as-special-condition`
                 ).value = "No";
+                document.querySelector(
+                    `#security-${i + 1}-action-being-taken`
+                ).value = "3 - Stays";
                 document
                     .querySelector(`#security-${i + 1}-existing-container`)
                     .classList.remove("hidden");
@@ -550,6 +583,9 @@ for (let i = 0; i < 6; i++) {
                     `#security-${i + 1}-label-purpose`
                 ).textContent = "Clear Title";
                 document.querySelector(
+                    `#security-${i + 1}-rates-notice`
+                ).value = "Yes (recheck rates notice document)";
+                document.querySelector(
                     `#security-${i + 1}-copy-as-special-condition`
                 ).value = "Yes";
                 document
@@ -574,6 +610,24 @@ for (let i = 0; i < 6; i++) {
         }
     });
 }
+
+// securities unregistered inputs
+for (let i = 0; i < 6; i++) {
+    document
+        .querySelector(`#security-${i + 1}-checkbox-unregistered`)
+        .addEventListener("click", function(e) {
+            if (e.target.checked == true) {
+                document.querySelector(
+                    `#security-${i + 1}-unregistered-security`
+                ).value = "Yes";
+            } else if (e.target.checked == false) {
+                document.querySelector(
+                    `#security-${i + 1}-unregistered-security`
+                ).value = "No";
+            }
+        });
+}
+
 function pasteBorrowerOneName() {
     lastNameHeader.textContent = borrowerFullNamesArr[0].lastName;
     document.title = `${
