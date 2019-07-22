@@ -3,13 +3,19 @@
 }
 
 input,
-select {
+select,
+textarea {
     border: 1.5px solid #edf2f7;
 }
 
 input:focus,
 select:focus {
     border-color: var(--primary-color);
+}
+
+textarea:focus {
+    border-color: var(--primary-color);
+    background: #fff;
 }
 
 #borrower-button-container > div > button,
@@ -48,16 +54,40 @@ select:focus {
     margin-bottom: 4px;
 }
 
+#caseflow-tabs #tab-8 {
+    background: #0172c8;
+    color: #fff;
+}
+
+#caseflow-tabs #tab-9 {
+    background: #c8aa01;
+    color: #fff;
+    margin-top: -4px;
+    border-right: 4px solid #1a202c;
+    border-top: 4px solid #1a202c;
+    border-bottom: 4px solid #1a202c;
+}
+
 #caseflow-tabs li:hover {
     background: #fff;
     color: #1a202c;
     cursor: pointer;
 }
 
+#caseflow-tabs #tab-8:hover {
+    background: #fff;
+    color: #0172c8;
+}
+
 #caseflow-tabs li.selected-tab {
     background: #fff;
     color: #1a202c;
     margin-bottom: 0px;
+}
+
+#caseflow-tabs #tab-8.selected-tab {
+    background: #fff;
+    color: #0172c8;
 }
 
 /* Checklist & Radio */
