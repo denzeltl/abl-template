@@ -79,8 +79,12 @@ const loanPurpose = document.querySelector("#loan-purpose");
 
 // matter number event listener
 matterNumber.addEventListener("change", e => {
-    let matter = e.target.value;
+    const matter = e.target.value;
     matterNumberHeader.textContent = matter;
+    document.querySelector("#outlook-email").value =
+        "Hi Team,\n\nData entry completed for the matter " +
+        matter +
+        "\n\nPlease let me know if it’s good for p1.\n\nThanks,";
 });
 
 // left content inputs event listers
@@ -852,6 +856,75 @@ function hideContentsOfTabs() {
         content.classList.add("hidden");
     });
 }
+
+// mortgage manager event listener
+document
+    .querySelector("#select-mortgage-manager")
+    .addEventListener("change", function(e) {
+        switch (e.target.value) {
+            case "select-afm":
+                document.querySelector("#professional-fees").value = "$330.00";
+                document.querySelector("#petties").value = "N/A";
+                document.querySelector("#title-search").value = "N/A";
+                document.querySelector("#express-post").value = "N/A";
+                break;
+            case "select-bc":
+                document.querySelector("#professional-fees").value = "$300.00";
+                document.querySelector("#petties").value = "$85.00";
+                document.querySelector("#title-search").value = "YES";
+                document.querySelector("#express-post").value = "$12.00";
+                break;
+            case "select-bmm":
+                document.querySelector("#professional-fees").value = "$270.00";
+                document.querySelector("#petties").value = "$85.00";
+                document.querySelector("#title-search").value = "YES";
+                document.querySelector("#express-post").value = "$12.00";
+                break;
+            case "select-mezy":
+                document.querySelector("#professional-fees").value = "$270.00";
+                document.querySelector("#petties").value = "$85.00";
+                document.querySelector("#title-search").value = "YES";
+                document.querySelector("#express-post").value = "$12.00";
+                break;
+            case "select-af":
+                document.querySelector("#professional-fees").value = "$300.00";
+                document.querySelector("#petties").value = "$85.00";
+                document.querySelector("#title-search").value = "YES";
+                document.querySelector("#express-post").value = "$12.00";
+                break;
+            case "select-mh-abl":
+                document.querySelector("#professional-fees").value = "$395.00";
+                document.querySelector("#petties").value = "N/A";
+                document.querySelector("#title-search").value = "YES";
+                document.querySelector("#express-post").value = "N/A";
+                break;
+            case "select-mh-mmm":
+                document.querySelector("#professional-fees").value = "$395.00";
+                document.querySelector("#petties").value = "N/A";
+                document.querySelector("#title-search").value = "YES";
+                document.querySelector("#express-post").value = "N/A";
+                break;
+            case "select-mb":
+                document.querySelector("#professional-fees").value = "$270.00";
+                document.querySelector("#petties").value = "$85.00";
+                document.querySelector("#title-search").value = "YES";
+                document.querySelector("#express-post").value = "N/A";
+                break;
+            case "select-mba":
+                document.querySelector("#professional-fees").value = "$300.00";
+                document.querySelector("#petties").value = "$85.00";
+                document.querySelector("#title-search").value = "YES";
+                document.querySelector("#express-post").value = "$12.00";
+                break;
+            case "select-cred":
+                document.querySelector("#professional-fees").value = "$450.00";
+                document.querySelector("#petties").value = "N/A";
+                document.querySelector("#title-search").value = "NO";
+                document.querySelector("#express-post").value = "N/A";
+                break;
+        }
+    });
+
 // input paralegal function
 inputParalegal.addEventListener("change", function(e) {
     if (e.target.value.toUpperCase() == "ARD") {
