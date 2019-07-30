@@ -340,13 +340,13 @@
                                 class="appearance-none bg-gray-200 py-1 pl-2 pr-5 rounded focus:outline-none focus:bg-white"
                                 id="borrower-6-salutation"
                             >
-                                <option>- N/A -</option>
-                                <option>1 - Mr</option>
-                                <option>2 - Mrs</option>
-                                <option>3 - Ms</option>
-                                <option>4 - Miss</option>
-                                <option>5 - Dr</option>
-                                <option>6 - Prof</option>
+                                <option value="select-na">- N/A -</option>
+                                    <option value="select-mr">1 - Mr</option>
+                                    <option value="select-mrs">2 - Mrs</option>
+                                    <option value="select-ms">3 - Ms</option>
+                                    <option value="select-miss">4 - Miss</option>
+                                    <option value="select-dr">5 - Dr</option>
+                                    <option value="select-prof">6 - Prof</option>
                             </select>
                             <div
                                 class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
@@ -921,26 +921,26 @@
                                    class="block appearance-none w-full bg-gray-200 py-1 px-2 rounded focus:outline-none focus:bg-white"
                                     id="select-mortgage-manager"
                                 >
-                                    <option>- N/A -</option>
-                                    <option>AFM/NMC</option>
-                                    <option
+                                    <option value="select-na">- N/A -</option>
+                                    <option value="select-afm">AFM/NMC</option>
+                                    <option value="select-af"
                                         >Australian Financial</option
                                     >
-                                    <option>Better Choice</option>
-                                    <option
+                                    <option value="select-bc">Better Choice</option>
+                                    <option value="select-bmm"
                                         >Better Mortgage
                                         Management</option
                                     >
-                                    <option>Credabl</option>
-                                    <option>MBA / One26</option>
-                                    <option>MEZY</option>
-                                    <option
+                                    <option value="select-cred">Credabl</option>
+                                    <option value="select-mba">MBA / One26</option>
+                                    <option value="select-mezy">MEZY</option>
+                                    <option value="select-mh-abl"
                                         >Mortgage House (ABL)</option
                                     >
-                                    <option
+                                    <option value="select-mh-mmm"
                                         >Mortgage House (MMM)</option
                                     >
-                                    <option>My Budget</option>
+                                    <option value="select-mb">My Budget</option>
                                 </select>
                                 <div
                                     class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-1"
@@ -3491,13 +3491,7 @@
                     >
                     <p class="text-center font-semibold mb-4">Send to <span class="font-bold">BRIS-DocPrepQA</span></p>
 <div class="" id="borrower-1-p-container">
-                            <textarea class="w-1/2 h-48 py-1 px-2 outline-none bg-gray-200 border-gray-200">Hi Team,
-
-Data entry completed for the matter xxxxxxx
-
-Please let me know if it’s good for p1.
-
-Thanks,</textarea>
+                            <textarea id="outlook-email" class="w-1/2 h-48 py-1 px-2 outline-none bg-gray-200 border-gray-200"></textarea>
 </div>
                 </li>
             </ul>
