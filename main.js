@@ -857,6 +857,25 @@ function hideContentsOfTabs() {
     });
 }
 
+// discrepancy container button
+document.getElementById("tab-9").addEventListener("click", () => {
+    document.getElementById("discrepancy-container").classList.remove("hidden");
+    document.getElementById("tab-9").classList.add("focus-tab-9");
+});
+// discrepancy close button
+document.getElementById("close-discrepancy").addEventListener("click", () => {
+    document.getElementById("discrepancy-container").classList.add("hidden");
+    document.getElementById("tab-9").classList.remove("focus-tab-9");
+});
+window.addEventListener("click", e => {
+    if (e.target == document.getElementById("discrepancy-container")) {
+        document
+            .getElementById("discrepancy-container")
+            .classList.add("hidden");
+        document.getElementById("tab-9").classList.remove("focus-tab-9");
+    }
+});
+
 // mortgage manager event listener
 document
     .querySelector("#select-mortgage-manager")

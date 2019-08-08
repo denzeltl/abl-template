@@ -180,3 +180,45 @@ textarea:focus {
 .control--radio input:disabled ~ .control__indicator:after {
     background: #7b7b7b;
 }
+
+#discrepancy-container {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Focus tab 9 */
+.focus-tab-9 {
+    z-index: 2;
+    background-color: #fff !important;
+    color: #c8aa01 !important;
+}
+
+/* Discrepancy content */
+#discrepancy-content {
+    background-color: #fff;
+    width: 80%;
+    position: relative;
+}
+
+/* The Close Button */
+#close-discrepancy {
+    font-size: 28px;
+    font-weight: bold;
+    top: 0;
+    right: 0;
+    margin-right: 15px;
+    position: absolute;
+}
+
+#close-discrepancy:hover,
+#close-discrepancy:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
