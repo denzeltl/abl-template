@@ -77,14 +77,32 @@ const caseflowTabsContents = document.querySelectorAll(
 const loanAmount = document.querySelector("#loan-amount");
 const loanPurpose = document.querySelector("#loan-purpose");
 
+// discrepancy content
+const discrepancyInput = document.querySelector("#discrepancy-input");
+const discrepancyUl = document.querySelector("#discrepancy-list");
+
+discrepancyUl.addEventListener("click", e => {
+    if (e.target.classList.contains("fa-trash")) {
+        e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+    }
+});
+
+discrepancyInput.addEventListener("keypress", e => {
+    if (e.which === 13) {
+        let discrepancy = e.target.value;
+        e.target.value = "";
+        let li = document.createElement("li");
+        li.setAttribute("class", "flex mb-2 items-center w-full");
+        li.innerHTML = `<p class="w-full py-0 my-0">- ${discrepancy}</p><i class="fas fa-trash ml-2 right-0 hover:text-red-700 focus:text-red-700 cursor-pointer"></i>`;
+        document.querySelector("#discrepancy-list").appendChild(li);
+    }
+});
+
 // matter number event listener
 matterNumber.addEventListener("change", e => {
     const matter = e.target.value;
     matterNumberHeader.textContent = matter;
-    document.querySelector("#outlook-email").value =
-        "Hi Team,\n\nData entry completed for the matter " +
-        matter +
-        "\n\nPlease let me know if it’s good for p1.\n\nThanks,";
+    document.querySelector("#outlook-email-matter").textContent = matter;
 });
 
 // left content inputs event listers
