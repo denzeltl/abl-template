@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>ABL Template</title>
+<title>DocPrep Template</title>
 <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 <link
     rel="stylesheet"
@@ -899,9 +899,17 @@
                 </li>
             </ul>
           <div id="discrepancy-container" class="hidden">
-  <div id="discrepancy-content" class="p-4 mx-auto mt-48">
+  <div id="discrepancy-content" class="p-4 mx-auto mt-48 h-56">
     <span id="close-discrepancy" class="text-gray-500 hover:text-red-700 focus:text-red-700">&times;</span>
-    <p>Search bar for discrepancy list</p>
+    <input
+        class="w-2/3 bg-gray-200 py-1 px-2 mt-4 leading-tight outline-none focus:outline-none focus:bg-white"
+        type="text"
+        id="discrepancy-input"
+        value=""
+        placeholder="Enter discrepancy..."
+    />
+    <ul id="discrepancy-list" class="w-2/3 mt-4 py-1 px-2 mx-auto text-left">
+    </ul>
   </div>
 </div>
             <ul id="caseflow-tabs-content">
@@ -963,17 +971,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex mb-4 items-center">
-                            <p
-                                class="w-1/3 text-right my-0 mr-4 font-bold"
-                            >
-                                Delivery Method
-                            </p>
-                            <p class="w-2/3 text-left my-0">
-                                - Check Instructions / Email for
-                               delivery of docs
-                            </p>
-                       </div>
                         <div
                             id="solicitor-details-container"
                             class="flex mb-4 items-center hidden"
@@ -3270,42 +3267,6 @@
                                     disabled
                                 />
                             </div>
-<div class="mb-4 items-center">
-        <div class="flex mb-2">
-                                <label
-                                    class="w-1/3 text-right mr-4 font-bold"
-                                    for="title-search"
-                                    >Title Search</label
-                                >
-                                <input
-                                    class="w-2/3 bg-gray-400 py-1 px-2 leading-tight outline-none border-gray-400 cursor-not-allowed"
-                                    type="text"
-                                    id="title-search"
-                                    value="$1.00"
-                                    placeholder=""
-                                    disabled
-                                />
-</div>
-        <div class="flex">
-                                <label
-                                    class="w-1/3 text-right mr-4 font-semibold text-sm"
-                                    for="we-title-searched"
-                                    >New Lending Searched for Title?</label
-                                >
-                                <div class="w-2/3 flex">
-        <label class="control control--radio"
-                >Yes
-                <input type="radio" name="title-searched-radio" id="title-searched-radio-yes" />
-                <div class="control__indicator"></div>
-            </label>
-            <label class="control control--radio ml-6"
-                >No
-                <input type="radio" name="title-searched-radio" id="title-searched-radio-no" />
-                <div class="control__indicator"></div>
-            </label>
-</div>
-</div>
-</div>
 <div class="flex items-center">
                                 <label
                                     class="w-1/3 text-right mr-4 font-bold"
@@ -3497,7 +3458,10 @@
                     >
                     <p class="text-center font-semibold mb-4">Send to <span class="font-bold">BRIS-DocPrepQA</span></p>
 <div class="" id="borrower-1-p-container">
-                            <textarea id="outlook-email" class="w-1/2 h-48 py-1 px-2 outline-none bg-gray-200 border-gray-200"></textarea>
+                            <p id="outlook-email" class="w-1/2 py-1 px-2 outline-none bg-gray-200 border-gray-200 mx-auto text-left">Hi Team,<br><br>Data entry completed for the matter <b><span id="outlook-email-matter"></span></b>.
+                            <span id="outlook-email-discrepancy"></span>
+                            <br><br>Please let me know if it’s good for p1.
+                            <br><br>Thanks,</p>
 </div>
                 </li>
             </ul>
