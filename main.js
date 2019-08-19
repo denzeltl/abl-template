@@ -487,6 +487,9 @@ for (let i = 0; i < 6; i++) {
                 document
                     .querySelector(`#security-${i + 1}-existing-container`)
                     .classList.remove("hidden");
+                document.querySelector(`#security-${i + 1}-pexa`).value = "Yes";
+                document.querySelector("#pexa-fee").value = "$57.20";
+                document.querySelector("#pexa-settlement").value = "Yes";
             }
             if (securityPurpose.includes("Purchase")) {
                 document
@@ -530,6 +533,9 @@ for (let i = 0; i < 6; i++) {
                 document
                     .querySelector(`#security-${i + 1}-existing-container`)
                     .classList.remove("hidden");
+                document.querySelector(`#security-${i + 1}-pexa`).value = "No";
+                document.querySelector("#pexa-fee").value = "$0.00";
+                document.querySelector("#pexa-settlement").value = "No";
             }
             if (securityPurpose.includes("Purchase")) {
                 document
@@ -573,6 +579,9 @@ for (let i = 0; i < 6; i++) {
                 document
                     .querySelector(`#security-${i + 1}-existing-container`)
                     .classList.remove("hidden");
+                document.querySelector(`#security-${i + 1}-pexa`).value = "No";
+                document.querySelector("#pexa-fee").value = "$0.00";
+                document.querySelector("#pexa-settlement").value = "No";
             }
             if (securityPurpose.includes("Purchase")) {
                 document
@@ -613,6 +622,9 @@ for (let i = 0; i < 6; i++) {
                 document
                     .querySelector(`#security-${i + 1}-existing-container`)
                     .classList.add("hidden");
+                document.querySelector(`#security-${i + 1}-pexa`).value = "Yes";
+                document.querySelector("#pexa-fee").value = "$57.20";
+                document.querySelector("#pexa-settlement").value = "Yes";
             }
             if (securityPurpose.includes("Purchase")) {
                 document
