@@ -11,7 +11,7 @@ View [here](https://denzeltl.github.io/docprep-template/)
 ## Things Learned:
 
 -   JavaScript string methods namely, `split()`, `replace()`, `charAt()`
--   JavaScript array methods namely, `join()`, splice()`,`forEach()`,`map()`,`includes()`
+-   JavaScript array methods namely, `join()`, `splice()`,`forEach()`,`map()`,`includes()`
 -   Integrate JavaScript functions with HTML input forms (checkboxes & radios)
 -   Popup module that opens and closes
     ![Gif for Popup Module Example](gifs/popup-module.gif)
